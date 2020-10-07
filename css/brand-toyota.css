@@ -57,10 +57,10 @@
   border-color:var(--white);
 }
 
+/* custom background */
 .body__background_image{
   background:url(../img/background-road.jpg) 50% 50% / cover no-repeat;
 }
-
 .body__background_overlay::after{
   z-index: -1;
   left:0;

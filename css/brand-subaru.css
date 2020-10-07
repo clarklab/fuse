@@ -57,10 +57,10 @@
   border-color:var(--white);
 }
 
+/* custom background */
 .body__background_image{
   background:url(../img/background-city.jpg) 50% 50% / cover no-repeat;
 }
-
 .body__background_overlay::after{
   background: linear-gradient(0deg, rgba(0, 26, 255, 0.35), rgba(0, 26, 255, 0.35)), linear-gradient(180deg, rgba(0, 26, 255, 0.62) 45.05%, #001AFF 86.55%);
 }

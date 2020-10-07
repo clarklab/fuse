@@ -26,6 +26,8 @@ body {
   box-shadow:var(--shadow);
 }
 
+
+/* form */
 .form__signin {
   width: 100%;
   max-width: 350px;
@@ -69,14 +71,13 @@ width: 1rem;
 height: 1rem;  
 }
 
-
-
 .form__logo{
   width:4.5rem;
   height:4.5rem;
   line-height: 4.5rem;
 }
 
+/* custom background styling */
 .body__background_overlay::after{
   z-index: -1;
   left:0;
