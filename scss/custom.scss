@@ -1,0 +1,154 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+$border-width:                2px !default;
+$border-color:                #C4C4C4 !default;
+
+$border-radius:               .25rem !default;
+$border-radius-lg:            10px !default;
+$border-radius-sm:            .2rem !default;
+$card-border-radius:          $border-radius-lg;
+
+$theme-colors: (
+  "primary": #001AFF,
+  "danger": #ff4136,
+  "light": #F6F6F6,
+  "white": #FFFFFF,
+  "medium": $border-color
+);
+
+@import "../bootstrap/scss/bootstrap";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.question{
+	padding-top:30vh;
+	padding-bottom:70vh;
+}
+
+.form-check-flex{
+	position:relative;
+}
+
+.form-check-flex label{
+	width:100%;
+	border:2px solid $border-color;
+	border-radius: $border-radius-lg;
+	background-color: map-get($theme-colors, "white");
+	box-shadow: 0 0 10px rgba(map-get($theme-colors, "primary"), 0);
+	transition:.2s linear box-shadow;
+	cursor: pointer;
+}
+
+.form-check-flex label:hover{
+	box-shadow: 0 0 10px rgba(map-get($theme-colors, "primary"), 0.2);
+}
+
+.form-check-flex input:checked + label{
+	color: map-get($theme-colors, "primary");
+	border-color: map-get($theme-colors, "primary");
+	box-shadow: 0px 0px 10px rgba(map-get($theme-colors, "primary"), 0.5);
+}
+
+.form-check-flex.form-control-lg{
+	padding:0;
+	height:auto;
+}
+
+.form-check-flex.form-control-lg label{
+	padding:$spacer;
+	padding-left:$spacer*5;
+}
+
+.form-check-flex input{
+	margin:0;
+	transform:scale(1.5) translateY(-5px);
+	transform-origin:50% 50%;
+	left:$spacer*3;
+	top:50%;
+}
+
+.form-check-flex.form-radio-bottom label{
+	padding-left:1rem;
+	padding-bottom:3rem;
+	border-radius: 0;
+}
+
+.col:first-child .form-check-flex.form-radio-bottom label{
+	border-top-left-radius: $border-radius-lg;
+	border-bottom-left-radius: $border-radius-lg;
+	border-right-width:0;
+}
+
+.col:last-child .form-check-flex.form-radio-bottom label{
+	border-top-right-radius: $border-radius-lg;
+	border-bottom-right-radius: $border-radius-lg;
+	border-left-width:0;
+}
+
+.form-check-flex.form-radio-bottom input:checked + label{
+	border-radius: $border-radius-lg;
+	border-right-width: $border-width !important;
+	border-left-width: $border-width !important;
+}
+
+.form-check-flex.form-radio-bottom input{
+	position: absolute;
+	bottom:1rem;
+	top:auto;
+	left:50%;
+}
+
+.tooltip {margin-top:.5rem}
+
+.tooltip .tooltip-inner{
+	color:map-get($theme-colors, "primary");
+	background-color:rgba(map-get($theme-colors, "primary"), 0.1);
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+    border-bottom-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    border-top-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
+}
+.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
+    border-left-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
+}
+.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
+    border-right-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
+}
+
+.container {
+	position: absolute;
+	left:6rem;
+	right:20rem;
+	top:calc(56px + 2rem);
+	bottom:2rem;
+	overflow: scroll;
+	width:auto;
+	scroll-behavior: smooth;
+}
+
+.card__desking_sidebar{
+	width:16rem;
+	position: absolute;
+	top:calc(56px + 2rem);
+	right:2rem;
+}
+
+.roadmap{
+	position: absolute;
+	top:calc(56px + 2rem);
+	left:1rem;
+	width:4rem;
+}
+
+.roadmap .roadmap__step{
+  width:3rem;
+  height:3rem;
+  line-height: 3rem;
+}
+

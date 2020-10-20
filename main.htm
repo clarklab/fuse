@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fuse Main</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/aku5dye.css">
+    <link rel="stylesheet" href="scss/output.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+
+    <!-- Custom brand styles -->
+    <link href="css/brand-subaru.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="" style="background-color:#fff; display:block;">
+
+<!-- navbar component -->
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.htm">
+      <img src="img/logo-dark.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      <span class="font-weight-bold">FUSE</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      
+    </ul>
+    <span class="navbar-text">
+      <a href="#">Help</a>
+    </span>
+  </div>
+  </nav>
+
+<div class="roadmap">
+  <ul class="list-unstyled text-center">
+    <li>
+      <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-primary text-white">1</div>
+      <p class="small mt-0 mb-4">Pick Payment</p>
+    </li>
+    <li>
+      <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white">2</div>
+      <p class="small mt-0 mb-4">Customize</p>
+    </li>
+    <li>
+      <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white">3</div>
+      <p class="small mt-0 mb-4">Review</p>
+    </li>
+    <li>
+      <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white">4</div>
+      <p class="small mt-0 mb-4">Drive</p>
+    </li>
+  </ul>
+</div>
+
+<div class="container bg-light rounded-lg border">
+<form>
+
+  <div class="question pt-5" id="type">
+
+  <div class="row no-gutters">
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg form-radio-bottom h-100">
+        <input class="form-check-input" type="radio" name="leaseType" id="lease1" value="lease1">
+        <label class="form-check-label text-center h-100" for="lease1" onclick="javascript:setTimeout(()=>{window.location = '#trade' },500);">
+          <img class="d-block mx-auto" src="img/icon-lease.svg" alt="">
+          <span class="d-block h2 mb-2 text-primary">Lease</span>
+          <span class="d-block small mb-2">Flexible down payment</span>
+          <span class="d-block small mb-2">Easily upgrade to a new vehicle</span>
+          <span class="d-block small mb-2">Newest technology, style and warranty coverage</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg form-radio-bottom h-100">
+        <input class="form-check-input" type="radio" name="leaseType" id="lease2" value="lease2">
+        <label class="form-check-label text-center h-100" for="lease2" onclick="javascript:setTimeout(()=>{window.location = '#trade' },500);">
+          <img class="d-block mx-auto" src="img/icon-finance.svg" alt="">
+          <span class="d-block h2 mb-2 text-primary">Finance</span>
+          <span class="d-block small mb-2">No Mileage limits or lease fees</span>
+          <span class="d-block small mb-2">Available GAP coverage and <span class="text-primary">WalserCare</span> so you can drive with total peace of mind.</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg form-radio-bottom h-100">
+        <input class="form-check-input" type="radio" name="leaseType" id="lease3" value="lease3">
+        <label class="form-check-label text-center h-100" for="lease3" onclick="javascript:setTimeout(()=>{window.location = '#trade' },500);">
+          <img class="d-block mx-auto" src="img/icon-cash.svg" alt="">
+          <span class="d-block h2 mb-2 text-primary">Pay Cash</span>
+          <span class="d-block small mb-2">Flexible down payment</span>
+          <span class="d-block small mb-2">Easily upgrade to a new vehicle</span>
+          <span class="d-block small mb-2">Newest technology, style and warranty coverage</span>
+        </label>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+
+  </div> <!-- end question -->
+
+  <div class="question" id="trade">
+
+    <h2 class="text-primary text-center font-weight-bold mb-5">Do you have down payment or vehicle to trade in?</h2>
+
+  <div class="row">
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg">
+        <input class="form-check-input" type="radio" name="tradeOptions" id="trade1" value="option1">
+        <label class="form-check-label" for="trade1" onclick="javascript:setTimeout(()=>{window.location = '#mileage' },500);">Yes, I do</label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg">
+        <input class="form-check-input" type="radio" name="tradeOptions" id="trade2" value="option2">
+        <label class="form-check-label" for="trade2" onclick="javascript:setTimeout(()=>{window.location = '#mileage' },500);">No, I do not</label>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+
+</div><!-- end question -->
+
+  <div class="question" id="mileage">
+
+    <h2 class="text-primary text-center font-weight-bold mb-5">Do you have down payment or vehicle to trade in?</h2>
+
+  <div class="row">
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg">
+        <input class="form-check-input" type="radio" name="mileageOptions" id="mileage1" value="option1">
+        <label class="form-check-label" for="mileage1">10,000</label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Intellidesk can make smart choices for you. Look for the ✦ symbol, or change to match your needs...">
+        <input class="form-check-input" type="radio" name="mileageOptions" id="mileage2" value="option2" checked="checked">
+        <label class="form-check-label" for="mileage2">12,000</label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-check-flex form-control-lg">
+        <input class="form-check-input" type="radio" name="mileageOptions" id="mileage3" value="option3">
+        <label class="form-check-label" for="mileage3">15,000</label>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+
+  </div>
+
+</form>
+</div> <!-- end main container -->
+
+
+<!-- vehicle details card sidebar -->
+<div class="card card__desking_sidebar"> 
+  <img src="img/subaru-loop.gif" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title m-0">2020 Subaru Outback</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item d-flex w-100 justify-content-between">
+      <span>Stock Number</span>
+      <span class="text-muted">J172225</span>
+    </li>
+    <li class="list-group-item d-flex w-100 justify-content-between">
+      <span>VIN</span>
+      <span class="text-muted">ZACNJBBB4LPL28336</span>
+    </li>
+    <li class="list-group-item d-flex w-100 justify-content-between">
+      <span>MSRP</span>
+      <span><span class="text-muted">$</span>27,315</span>
+    </li>
+    <li class="list-group-item d-flex w-100 justify-content-between">
+      <span>Upfront Price</span>
+      <span><span class="text-muted">$</span>26,335</span>
+    </li>
+    <li class="list-group-item d-flex w-100 justify-content-between">
+      <span>Residual</span>
+      <span><span class="text-muted">$</span>15,569</span>
+    </li>
+  </ul>
+</div>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+</html>
