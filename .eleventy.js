@@ -5,6 +5,7 @@ module.exports = function (config) {
     return {
         dir: {
             layouts: "_layouts",
+            output: "dist"
         }
     };
 };
