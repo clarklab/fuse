@@ -10,17 +10,25 @@ $border-radius-sm:            .2rem !default;
 $card-border-radius:          $border-radius-lg;
 
 $theme-colors: (
-  "primary": #001AFF,
+  "primary": #0618BB,
   "danger": #ff4136,
   "light": #F6F6F6,
   "white": #FFFFFF,
   "medium": $border-color
 );
 
+
 @import "../bootstrap/scss/bootstrap";
+
+
+
 
 html {
   scroll-behavior: smooth;
+}
+
+.line-height-1{
+	line-height: 1;
 }
 
 .question{
@@ -44,6 +52,8 @@ html {
 
 .form-check-flex label:hover{
 	box-shadow: 0 0 10px rgba(map-get($theme-colors, "primary"), 0.2);
+	position: relative;
+	z-index: 9;
 }
 
 .form-check-flex input:checked + label{
@@ -60,6 +70,7 @@ html {
 .form-check-flex.form-control-lg label{
 	padding:$spacer;
 	padding-left:$spacer*5;
+	transition:.2s ease all;
 }
 
 .form-check-flex input{
@@ -68,6 +79,7 @@ html {
 	transform-origin:50% 50%;
 	left:$spacer*3;
 	top:50%;
+	z-index: 11;
 }
 
 .form-check-flex.form-radio-bottom label{
@@ -76,22 +88,30 @@ html {
 	border-radius: 0;
 }
 
+.col:nth-child(2) .form-check-flex.form-radio-bottom label{
+	border-right-width:0;
+	border-left-width:0;
+}
+
 .col:first-child .form-check-flex.form-radio-bottom label{
 	border-top-left-radius: $border-radius-lg;
 	border-bottom-left-radius: $border-radius-lg;
-	border-right-width:0;
 }
 
 .col:last-child .form-check-flex.form-radio-bottom label{
 	border-top-right-radius: $border-radius-lg;
 	border-bottom-right-radius: $border-radius-lg;
-	border-left-width:0;
+	border-right-width: $border-width;
 }
 
 .form-check-flex.form-radio-bottom input:checked + label{
-	border-radius: $border-radius-lg;
+	border-radius: $border-radius-lg !important;
 	border-right-width: $border-width !important;
 	border-left-width: $border-width !important;
+	transform:scale(1.05);
+	transform-origin:50% 50%;
+	position: relative;
+	z-index: 10;
 }
 
 .form-check-flex.form-radio-bottom input{
@@ -99,6 +119,11 @@ html {
 	bottom:1rem;
 	top:auto;
 	left:50%;
+}
+
+.question .custom-control-label::before, .question .custom-control-label::after{
+	top:calc(50% - 8px);
+	left:10%;
 }
 
 .tooltip {margin-top:.5rem}
@@ -130,6 +155,11 @@ html {
 	overflow: scroll;
 	width:auto;
 	scroll-behavior: smooth;
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar { 
+	    display: none;  /* Safari and Chrome */
+	}
 }
 
 .card__desking_sidebar{
@@ -151,4 +181,8 @@ html {
   height:3rem;
   line-height: 3rem;
 }
+
+
+@import "../css/signin";
+@import "../css/brand-subaru"; 
 

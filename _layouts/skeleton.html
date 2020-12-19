@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fuse Main</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/aku5dye.css">
+    <link rel="stylesheet" href="../css/output.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+
+    <!-- Custom brand styles -->
+    <link href="css/brand-subaru.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="" style="background-color:#fff; display:block;">
+
+<!-- navbar component -->
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.htm">
+      <img src="../img/logo-subaru.svg" width="150" height="30" class="d-inline-block align-top mr-3" alt="">
+      <span class="font-weight-medium">Walser Subaru</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      
+    </ul>
+    <span class="navbar-text">
+      <a href="#">Help</a>
+    </span>
+  </div>
+  </nav>
+
+{% include _roadmap.html %}
+
+{% include _main_get_started.html %}
+
+{% include _card_vehicle.html %}
+
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+function advance(el) {
+  var target = document.getElementById(el).nextElementSibling.id;
+  javascript:setTimeout(()=>{window.location = '#'+target },500);
+}
+
+</script>
+
+</body>
+</html>

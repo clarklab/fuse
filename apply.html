@@ -1,0 +1,45 @@
+---
+layout: skeleton.html
+
+roadmap:
+  - label: Get Started
+  - label: Customize
+  - label: Review
+  - label: Apply
+    selected: true
+  - label: Drive
+
+wizard:
+  - question:
+    type: radio-expanded
+    slug: drive-apply
+    ask: You did it! It’s almost yours!
+    choices:
+    - value: Come see it!
+      image: icon-dealership.svg
+      content1: Visit Walser Subaru for a test drive
+      content2: Schedule an appointment today
+      content3: Lock in your deal for 3 days
+    - value: Apply Today
+      image: icon-garage.svg
+      content1: Ready to start the paperwork?
+      content2: Start your <strong>credit application</strong> now
+      content3: Lock in your deal for 3 days
+  - question:
+    type: radio-simple
+    slug: location
+    ask: Where do you want to meet?
+    choices:
+    - value: Walser Subaru
+    - value: Bring the car to me
+  - question:
+    type: confirmation
+    slug: confirmation
+    ask: You did it!
+    ref: 10813
+    message:
+    - Please <strong>keep an eye on your inbox.</strong> Your  schedule confirmation should be arriving soon.
+    - In the meantime, if you need any help, give us a call at <strong>(952) 314-1391.</strong>
+    - <a href="#">Click here to close your session.</a>
+
+---

@@ -1,0 +1,49 @@
+---
+layout: skeleton.html
+
+roadmap:
+  - label: Get Started
+    selected: true
+  - label: Customize
+  - label: Review
+  - label: Apply
+  - label: Drive
+
+wizard:
+  - question:
+    type: radio-expanded
+    slug: payment
+    ask: Select your payment type
+    choices:
+    - value: Lease
+      image: icon-lease.svg
+      content1: Flexible down payment
+      content2: Easily upgrade to a new vehicle
+      content3: Newest technology, style and warranty coverage
+    - value: Finance
+      image: icon-finance.svg
+      content1: No Mileage limits or lease fees
+      content2: Available GAP coverage and <strong>WalserCare</strong> so you can drive with total peace of mind.
+    - value: Cash
+      image: icon-cash.svg
+      content1: Flexible down payment
+      content2: Easily upgrade to a new vehicle
+      content3: Newest technology, style and warranty coverage
+  - question:
+    type: radio-simple
+    slug: trade
+    ask: Do you have down payment or vehicle to trade in?
+    choices:
+    - value: Yes, I do
+    - value: No, I do not
+  - question:
+    type: radio-simple
+    slug: mileage
+    ask: How many miles per year do you drive?
+    choices:
+    - value: 8,000
+    - value: 12,000
+      selected: true
+      tooltip: Intellidesk can make smart choices for you. Look for the ✦ symbol, or change to match your needs...
+    - value: 15,000+
+---

@@ -1,0 +1,22 @@
+
+<div class="question" id="{{ question.slug }}">
+
+    <h2 class="text-primary text-center font-weight-bold mb-5">{{ question.ask }}</h2>
+
+  <div class="row px-3">
+
+    <div class="col">
+      <p class="mb-0">Order reference</p>
+      <p class="h2 mt-0">#{{ question.ref }}</p>
+      {% for point in question.message %}
+      <p class="mb-1">{{ point }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="col">
+      {% include _art-confirmation.svg %}
+    </div>
+
+  </div>
+
+</div>

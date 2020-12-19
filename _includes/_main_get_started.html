@@ -1,0 +1,20 @@
+<div class="container bg-light rounded-lg border px-4">
+
+<form>
+
+  {% for question in wizard %}
+
+  {% if question.type == "radio-simple" %}
+    {% include _wizard_radio_simple.html %}
+
+  {% elsif question.type == "radio-expanded" %}
+    {% include _wizard_radio_expanded.html %}
+
+  {% elsif question.type == "confirmation" %}
+    {% include _wizard_confirmation.html %}
+
+  {% endif %}
+  {% endfor %}
+
+</form>
+</div> <!-- end main container -->
