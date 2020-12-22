@@ -18,6 +18,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js" integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-minimal.css" integrity="sha512-82n59AgQXo3NhYHeauDYw9TE2zGh9yOdXN9wbiDZA+uaf0xOkSYxGNLzKMMngZQjBTw94EujhfEfKkYybQqfOQ==" crossorigin="anonymous" />
 
 </head>
 
@@ -227,8 +229,10 @@
 </form>
 </div> <!-- end main container -->
 
+<aside class="sidebar">
+
 <!-- vehicle details card sidebar -->
-<div class="card card__desking_sidebar"> 
+<div class="card card__desking_sidebar mb-3"> 
   <img src="../img/subaru-loop.gif" class="card-img-top" alt="...">
   <div class="card-body py-2">
     <h5 class="card-title m-0">2021 Subaru Outback</h5>
@@ -245,6 +249,48 @@
   </ul>
 </div>
 
+<div id="cardID1" class="card card__payment p-2 mb-2">
+  <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="checked">
+    <label class="custom-control-label w-100" for="customRadio1">
+      <div class="d-flex w-100 justify-content-between mt-1 mb-1">
+        <img src="../img/logo-us-bank.svg" height="18" alt="">
+        <small class="sparkle">Lowest Payment</small>
+      </div>
+      <div class="d-flex w-100 justify-content-between mb-0">
+        <small class="line-height-1 pt-1">Your Lease<br />Payment</small>
+        <h1 class="m-0 currency__usd line-height-1 odometer">329</h1>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <small>Due at signing</small>
+        <h6 class="m-0 currency__usd">1,589</h6>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="cardID2" class="card card__payment p-2">
+  <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+    <label class="custom-control-label w-100" for="customRadio2">
+      <div class="d-flex w-100 justify-content-between mt-1 mb-1">
+        <img src="../img/logo-subaru-dark.svg" height="12" alt="">
+        <small class=""> </small>
+      </div>
+      <div class="d-flex w-100 justify-content-between mb-0">
+        <small class="line-height-1 pt-1">Your Lease<br />Payment</small>
+        <h1 class="m-0 currency__usd line-height-1 odometer">345</h1>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <small>Due at signing</small>
+        <h6 class="m-0 currency__usd">1,789</h6>
+      </div>
+    </label>
+  </div>
+</div>
+
+</aside>
+
 
 <script>
 $(function () {
@@ -252,6 +298,8 @@ $(function () {
 })
 
 function advance(el) {
+  $('#cardID1 .odometer').html(Math.floor(Math.random() * 100) + 249 );
+  $('#cardID2 .odometer').html(Math.floor(Math.random() * 100) + 249 );
   var target = document.getElementById(el).nextElementSibling.id;
   javascript:setTimeout(()=>{window.location = '#'+target },500);
 }

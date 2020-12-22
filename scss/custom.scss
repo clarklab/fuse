@@ -121,6 +121,8 @@ html {
 	left:50%;
 }
 
+
+
 .question .custom-control-label::before, .question .custom-control-label::after{
 	top:calc(50% - 8px);
 	left:10%;
@@ -162,11 +164,11 @@ html {
 	}
 }
 
-.card__desking_sidebar{
+aside.sidebar{
 	width:16rem;
 	position: absolute;
 	top:calc(56px + 2rem);
-	right:2rem;
+	right:2rem; 
 }
 
 .roadmap{
@@ -182,6 +184,31 @@ html {
   line-height: 3rem;
 }
 
+.currency__usd:before{
+	content:"$";
+	opacity: 0.35;
+}
+
+h1.currency__usd{
+	position: relative;
+}
+
+h1.currency__usd:before{
+	font-size: 1rem;
+	position: absolute;
+	transform:translateX(-130%);
+	top:5px;
+}
+
+.sparkle:before{
+	content:" ";
+	width:18px;
+	height:18px;
+	background: url(../img/icon-sparkle.svg) no-repeat;
+	background-size:100% 100%;
+	position: absolute;
+	transform:translateX(-120%);
+}
 
 @import "../css/signin";
 @import "../css/brand-subaru"; 
