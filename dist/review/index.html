@@ -51,7 +51,7 @@
     <li>
       <a href="../get-started/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">1</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Get Started</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Get Started</p>
       </a>
     </li>
     
@@ -59,7 +59,7 @@
     <li>
       <a href="../customize/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">2</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Customize</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Customize</p>
       </a>
     </li>
     
@@ -75,7 +75,7 @@
     <li>
       <a href="../apply/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">4</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Apply</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Apply</p>
       </a>
     </li>
     
@@ -83,7 +83,7 @@
     <li>
       <a href="../drive/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">5</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Drive</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Drive</p>
       </a>
     </li>
     
@@ -92,14 +92,9 @@
   </ul>
 </div>
 
-<div class="container wizard bg-light rounded-3 border px-4">
 
-<form>
 
-  
 
-</form>
-</div> <!-- end main container -->
 
 <aside class="sidebar">
 
@@ -176,10 +171,15 @@ function advance(el) {
   javascript:setTimeout(()=>{window.location = '#'+target },500);
 }
 
-function select(el) {
-  $('#cardID1 .odometer').html(Math.floor(Math.random() * 100) + 249 );
-  $('#cardID2 .odometer').html(Math.floor(Math.random() * 100) + 249 );
+function choices(el) {
+  $('.form-control, .options section').removeClass('active');
+  $('#' + el ).addClass('active');
+  $('#' + el ).parent().addClass('active');
+  $('.choices .inner').removeClass('active');
+  $('.choices .inner[data-for=' + el + ']').addClass('active');
 }
+
+$("[autofocus]").click();
 
 
 

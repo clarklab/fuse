@@ -47,6 +47,10 @@ html {
     display: none;  /* Safari and Chrome */
 }
 
+.container input, .container label{
+	cursor: pointer;
+}
+
 .question{
 	padding-top:30vh;
 	padding-bottom:70vh;

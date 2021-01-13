@@ -8127,6 +8127,9 @@ html {
   display: none;
   /* Safari and Chrome */ }
 
+.container input, .container label {
+  cursor: pointer; }
+
 .question {
   padding-top: 30vh;
   padding-bottom: 70vh; }
@@ -8350,10 +8353,6 @@ h1.currency__usd:before, .currency__usd.h1:before {
 .list-group > :not(:last-child) {
   margin-bottom: -2px; }
 
-/* css variables (to be replaced by scss/etc) */
-:root {
-  --shadow:0px 0px 10px rgba(0, 0, 0, 0.2); }
-
 html,
 body {
   height: 100%; }
@@ -8372,7 +8371,7 @@ body {
 
 /* layout */
 .navbar {
-  box-shadow: var(--shadow); }
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
 
 /* form */
 .form__signin {

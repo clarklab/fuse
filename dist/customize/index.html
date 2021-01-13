@@ -25,7 +25,6 @@
 
 <body class="" style="background-color:#fff; display:block;">
 
-
 <!-- navbar component -->
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
 <div class="container-fluid">
@@ -52,7 +51,7 @@
     <li>
       <a href="../get-started/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">1</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Get Started</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Get Started</p>
       </a>
     </li>
     
@@ -68,7 +67,7 @@
     <li>
       <a href="../review/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">3</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Review</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Review</p>
       </a>
     </li>
     
@@ -76,7 +75,7 @@
     <li>
       <a href="../apply/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">4</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Apply</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Apply</p>
       </a>
     </li>
     
@@ -84,7 +83,7 @@
     <li>
       <a href="../drive/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle bg-medium text-white mb-0">5</div>
-      <p class="small mt-1 mb-3 line-height-1  text-black-50">Drive</p>
+      <p class="small mt-1 mb-3 line-height-1  text-body">Drive</p>
       </a>
     </li>
     
@@ -93,7 +92,10 @@
   </ul>
 </div>
 
-<div class="container bg-light rounded-3 border px-4">
+
+
+
+  <div class="container bg-light rounded-3 border px-4">
 
 <div class="row h-100">
 
@@ -334,7 +336,6 @@
 	</div>
 
 
-
 	<div class="col choices py-4 h-100 overflow-auto">
 
 	
@@ -343,244 +344,594 @@
 	
 	
 	
+		
+		
+
+<section data-for="lease-type" class="inner">
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-typeOptions"
+		id="lease-type1"
+		value="lease-type1"
+		>
 	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-type1"
+		onclick="advance('lease-type');">
 
-		<section data-for="lease-type" class="inner">
-
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-typeOptions" id="lease-type1" value="lease-type1">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-type1" onclick="advance('lease-type');">10% down 
-			
-				<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">
-					You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.
-				</div>
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-typeOptions" id="lease-type2" value="lease-type2" checked="checked">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-type2" onclick="advance('lease-type');">$0 down 
-			
-				<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">
-					You will <strong>not put any cash down</strong> to reduce the 'capitalized cost', but you will still need to come up with your first payment, tax, title, license and fees.
-				</div>
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-typeOptions" id="lease-type3" value="lease-type3">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-type3" onclick="advance('lease-type');">Sign & Drive 
-			
-				<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">
-					You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.
-				</div>
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-typeOptions" id="lease-type4" value="lease-type4">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-type4" onclick="advance('lease-type');">One Pay 
-			
-				<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">
-					You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.
-				</div>
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-typeOptions" id="lease-type5" value="lease-type5">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-type5" onclick="advance('lease-type');">Custom 
-			</label>
-				</div>
-
-		
-		
-
-		</section>
-
+	10% down 
 	
 	
+		<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.</div>
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-typeOptions"
+		id="lease-type2"
+		value="lease-type2"
+		 checked="checked">
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-type2"
+		onclick="advance('lease-type');">
+
+	$0 down 
+	
+	
+		<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">You will <strong>not put any cash down</strong> to reduce the 'capitalized cost', but you will still need to come up with your first payment, tax, title, license and fees.</div>
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-typeOptions"
+		id="lease-type3"
+		value="lease-type3"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-type3"
+		onclick="advance('lease-type');">
+
+	Sign & Drive 
+	
+	
+		<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.</div>
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-typeOptions"
+		id="lease-type4"
+		value="lease-type4"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-type4"
+		onclick="advance('lease-type');">
+
+	One Pay 
+	
+	
+		<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.</div>
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-typeOptions"
+		id="lease-type5"
+		value="lease-type5"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-type5"
+		onclick="advance('lease-type');">
+
+	Custom 
 	
 	
 
-		<section data-for="lease-term" class="inner">
+	</label>
 
-		 
+	</div>
 
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term1" value="lease-term1" checked="checked">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term1" onclick="advance('lease-term');">Lowest Payment 
-			</label>
-				</div>
 
-		
-		 
 
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term2" value="lease-term2">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term2" onclick="advance('lease-term');">12 months 
-			</label>
-				</div>
 
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term3" value="lease-term3">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term3" onclick="advance('lease-term');">24 months 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term4" value="lease-term4">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term4" onclick="advance('lease-term');">30 months 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term5" value="lease-term5">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term5" onclick="advance('lease-term');">33 months 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term6" value="lease-term6">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term6" onclick="advance('lease-term');">36 months <span class="fs-6 badge rounded-pill text-primary bg-primary-10 fw-medium mx-2">Lowest Payment</span>
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term7" value="lease-term7">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term7" onclick="advance('lease-term');">39 months 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term8" value="lease-term8">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term8" onclick="advance('lease-term');">42 months 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-termOptions" id="lease-term9" value="lease-term9">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-term9" onclick="advance('lease-term');">48 months 
-			</label>
-				</div>
-
-		
-		
-
-		</section>
+</section>
 
 	
 	
 	
+		
+		
+
+<section data-for="lease-term" class="inner">
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term1"
+		value="lease-term1"
+		 checked="checked">
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term1"
+		onclick="advance('lease-term');">
+
+	Lowest Payment 
+	
 	
 
-		<section data-for="lease-mileage" class="inner">
+	</label>
 
-		 
+	</div>
 
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage1" value="lease-mileage1" checked="checked">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage1" onclick="advance('lease-mileage');">7,500 
-			</label>
-				</div>
 
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term2"
+		value="lease-term2"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term2"
+		onclick="advance('lease-term');">
+
+	12 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term3"
+		value="lease-term3"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term3"
+		onclick="advance('lease-term');">
+
+	24 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term4"
+		value="lease-term4"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term4"
+		onclick="advance('lease-term');">
+
+	30 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term5"
+		value="lease-term5"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term5"
+		onclick="advance('lease-term');">
+
+	33 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term6"
+		value="lease-term6"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term6"
+		onclick="advance('lease-term');">
+
+	36 months <span class="fs-6 badge rounded-pill text-primary bg-primary-10 fw-medium mx-2">Lowest Payment</span>
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term7"
+		value="lease-term7"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term7"
+		onclick="advance('lease-term');">
+
+	39 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term8"
+		value="lease-term8"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term8"
+		onclick="advance('lease-term');">
+
+	42 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-termOptions"
+		id="lease-term9"
+		value="lease-term9"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-term9"
+		onclick="advance('lease-term');">
+
+	48 months 
+	
+	
+
+	</label>
+
+	</div>
+
+
+
+
+</section>
+
+	
+	
+	
 		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage2" value="lease-mileage2">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage2" onclick="advance('lease-mileage');">10,000 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage3" value="lease-mileage3" checked="checked">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage3" onclick="advance('lease-mileage');">12,000 
-			
-				<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">
-					Suggested for you based on the average number of miles driven. Mileage is an important factor in lease pricing.
-				</div>
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage4" value="lease-mileage4">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage4" onclick="advance('lease-mileage');">15,000 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage5" value="lease-mileage5">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage5" onclick="advance('lease-mileage');">18,000 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage6" value="lease-mileage6">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage6" onclick="advance('lease-mileage');">20,000 
-			</label>
-				</div>
-
-		
-		 
-
-			<div class="form-check-flex form-control-lg custom-control custom-radio">
-			<input class="form-check-input custom-control-input" type="radio" name="lease-mileageOptions" id="lease-mileage7" value="lease-mileage7">
-			<label class="form-check-label custom-control-label rounded-0" for="lease-mileage7" onclick="advance('lease-mileage');">Custom 
-			</label>
-				</div>
-
-		
 		
 
-		</section>
+<section data-for="lease-mileage" class="inner">
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage1"
+		value="lease-mileage1"
+		 checked="checked">
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage1"
+		onclick="advance('lease-mileage');">
+
+	7,500 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage2"
+		value="lease-mileage2"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage2"
+		onclick="advance('lease-mileage');">
+
+	10,000 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage3"
+		value="lease-mileage3"
+		 checked="checked">
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage3"
+		onclick="advance('lease-mileage');">
+
+	12,000 
+	
+	
+		<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">Suggested for you based on the average number of miles driven. Mileage is an important factor in lease pricing.</div>
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage4"
+		value="lease-mileage4"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage4"
+		onclick="advance('lease-mileage');">
+
+	15,000 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage5"
+		value="lease-mileage5"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage5"
+		onclick="advance('lease-mileage');">
+
+	18,000 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage6"
+		value="lease-mileage6"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage6"
+		onclick="advance('lease-mileage');">
+
+	20,000 
+	
+	
+
+	</label>
+
+	</div>
+
+
+ 
+
+	<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		type="radio"
+		name="lease-mileageOptions"
+		id="lease-mileage7"
+		value="lease-mileage7"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="lease-mileage7"
+		onclick="advance('lease-mileage');">
+
+	Custom 
+	
+	
+
+	</label>
+
+	</div>
+
+
+
+
+</section>
 
 	
 	
@@ -604,6 +955,7 @@
 
 
 </div> <!-- end main container -->
+
 
 <aside class="sidebar">
 

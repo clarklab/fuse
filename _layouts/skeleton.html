@@ -29,7 +29,13 @@
 
 {% include _roadmap.html %}
 
-{% include _main_get_started.html %}
+{% if wizard %}
+  {% include _main_get_started.html %}
+{% endif %}
+
+{% if options %}
+  {% include _main_customize.html %}
+{% endif %}
 
 {% include _card_vehicle.html %}
 
@@ -46,10 +52,15 @@ function advance(el) {
   javascript:setTimeout(()=>{window.location = '#'+target },500);
 }
 
-function select(el) {
-  $('#cardID1 .odometer').html(Math.floor(Math.random() * 100) + 249 );
-  $('#cardID2 .odometer').html(Math.floor(Math.random() * 100) + 249 );
+function choices(el) {
+  $('.form-control, .options section').removeClass('active');
+  $('#' + el ).addClass('active');
+  $('#' + el ).parent().addClass('active');
+  $('.choices .inner').removeClass('active');
+  $('.choices .inner[data-for=' + el + ']').addClass('active');
 }
+
+$("[autofocus]").click();
 
 
 
