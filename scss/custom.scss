@@ -9,8 +9,10 @@ $border-radius-lg:            10px !default;
 $border-radius-sm:            .2rem !default;
 $card-border-radius:          $border-radius-lg;
 
+$blue: #0618BB;
 $theme-colors: (
   "primary": #0618BB,
+  "primary-10": rgba(#0618BB, 0.1),
   "danger": #ff4136,
   "light": #F6F6F6,
   "white": #FFFFFF,
@@ -21,14 +23,28 @@ $theme-colors: (
 @import "../bootstrap/scss/bootstrap";
 
 
-
-
 html {
   scroll-behavior: smooth;
 }
 
+.fw-medium{
+	font-weight: 500 !important;
+}
+
+.tabular{
+	font-variant-numeric: tabular-nums;
+}
+
 .line-height-1{
 	line-height: 1;
+}
+
+.container, .overflow-auto {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar, .overflow-auto::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .question{
@@ -50,7 +66,7 @@ html {
 	cursor: pointer;
 }
 
-.form-check-flex label:hover{
+.wizard .form-check-flex label:hover{
 	box-shadow: 0 0 10px rgba(map-get($theme-colors, "primary"), 0.2);
 	position: relative;
 	z-index: 9;
@@ -59,7 +75,9 @@ html {
 .form-check-flex input:checked + label{
 	color: map-get($theme-colors, "primary");
 	border-color: map-get($theme-colors, "primary");
-	box-shadow: 0px 0px 10px rgba(map-get($theme-colors, "primary"), 0.5);
+	.wizard & {
+		box-shadow: 0px 0px 10px rgba(map-get($theme-colors, "primary"), 0.5);
+	}
 }
 
 .form-check-flex.form-control-lg{
@@ -75,11 +93,31 @@ html {
 
 .form-check-flex input{
 	margin:0;
-	transform:scale(1.5) translateY(-5px);
-	transform-origin:50% 50%;
-	left:$spacer*3;
+	left:$spacer*2;
 	top:50%;
+	transform:translateY(-50%);
 	z-index: 11;
+	position: absolute;
+
+	.choices & {
+		top:1.5rem;
+		transform:none;
+	}
+}
+
+.form-floating {
+	input{
+		font-size:1.25rem;
+	}
+	&.sparkle{
+		input{
+			text-indent: 1.25rem;
+		}
+		&:before{
+			left:2rem;
+			bottom:0.75rem;
+		}
+	}
 }
 
 .form-check-flex.form-radio-bottom label{
@@ -121,7 +159,56 @@ html {
 	left:50%;
 }
 
+.col.options{
+	.form-control:focus, .form-control.active{
+		background:map-get($theme-colors, "primary");
+		color:map-get($theme-colors, "white");
+		border-color: map-get($theme-colors, "primary");
+		box-shadow:none;
+		+ label{
+			color:map-get($theme-colors, "white");
+		}
+	}
+	.form-control:not(:focus):not(.active)[readonly]{
+		background-color:map-get($theme-colors, "white");
+	}
+}
 
+.col.choices div:first-child label{
+	border-top-right-radius: 10px !important;
+	border-top-left-radius: 10px !important;
+}
+.col.choices div:last-child label{
+	border-bottom-right-radius: 10px !important;
+	border-bottom-left-radius: 10px !important;
+}
+.col.choices div:not(:first-child) {
+	margin-top:-2px;
+}
+.col.choices div input:checked + label{
+	z-index: 9;
+	position: relative;
+}
+
+.col.choices {
+
+	.inner{
+		display: none;
+
+		&.active{
+			display: block;
+		}
+	}
+
+	.tip{
+		display: none;
+		width:calc(100% + 4rem);
+		margin-left:-4rem;
+	}
+	input:checked + label .tip{
+		display: block;
+	}
+}
 
 .question .custom-control-label::before, .question .custom-control-label::after{
 	top:calc(50% - 8px);
@@ -198,16 +285,46 @@ h1.currency__usd:before{
 	position: absolute;
 	transform:translateX(-130%);
 	top:5px;
-}
+} 
 
 .sparkle:before{
 	content:" ";
 	width:18px;
 	height:18px;
-	background: url(../img/icon-sparkle.svg) no-repeat;
+	background-image: url(../img/icon-sparkle.svg);
+	background-repeat: no-repeat;
 	background-size:100% 100%;
 	position: absolute;
 	transform:translateX(-120%);
+}
+.sparkle.active:before{
+	background-image: url(../img/icon-sparkle-white.svg);
+}
+
+// FORM LIST GROUP
+
+.list-group {
+	input{
+		border-radius: 0;
+	}
+	input:focus{
+		position: relative;
+		z-index: 9;
+	}
+	input:focus + label{
+		z-index: 10;
+	}
+	> :first-child input{
+		border-top-left-radius:$border-radius-lg;
+		border-top-right-radius:$border-radius-lg;
+	}
+	> :last-child input{
+		border-bottom-left-radius:$border-radius-lg;
+		border-bottom-right-radius:$border-radius-lg;
+	}
+	> :not(:last-child){
+		margin-bottom:-2px;
+	}
 }
 
 @import "../css/signin";

@@ -1,0 +1,18 @@
+<section class="form-floating mb-2 {% if question.sparkle %}sparkle{% endif %}">
+
+	<input
+		type="text"
+		class="form-control fw-bold rounded-3"
+		id="{{ question.slug }}"
+		placeholder="{{ question.placeholder }}"
+		value="{{ question.placeholder }}"
+		onclick="choices('{{ question.slug }}');"
+		{% if question.selected %} autofocus{% endif %} readonly
+	>
+	<label
+		for="{{ question.slug }}"
+		class="text-uppercase">
+		{{ question.label }}
+	</label>
+
+</section>

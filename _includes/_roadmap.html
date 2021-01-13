@@ -4,9 +4,9 @@
     {% assign counter = 1 %}
     {% for step in roadmap %}
     <li>
-      <a href="../{{step.label | slug }}/index.html" class="text-dark">
+      <a href="../{{step.label | slug }}/index.html" class="text-dark text-decoration-none">
       <div class="roadmap__step align-middle d-inline-block center h2 rounded-circle {% if step.selected %}bg-primary{% else %}bg-medium{% endif %} text-white mb-0">{{counter}}</div>
-      <p class="small mt-1 mb-3 line-height-1">{{step.label}}</p>
+      <p class="small mt-1 mb-3 line-height-1  {% if step.selected %}text-primary{% else %}text-black-50{% endif %}">{{step.label}}</p>
       </a>
     </li>
     {% assign counter = counter | plus:1 %}

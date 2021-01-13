@@ -47,18 +47,32 @@
   </nav>
 
 <!-- sign-in form component -->
-  <form class="form__signin">
+  <form class="form__signin text-center">
     <div class="form__logo align-middle d-inline-block center h2 rounded-circle bg-primary text-white mb-3">W</div>
     <h1 class="h5 mb-3 font-weight-bold text-muted">Please Sign In</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-    <div class="custom-control custom-checkbox mb-3">  
-        <input type="checkbox" class="custom-control-input" id="customCheck1">  
-        <label class="custom-control-label text-muted" for="customCheck1">Remember Me</label>  
-    </div> 
-    <button class="btn btn-lg btn-secondary btn-block font-weight-bold" type="submit">Sign In</button>
+
+    <section class="list-group">
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    </section>
+
+    <div class="form-check my-3">
+      <input class="form-check-input float-none" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Remember me
+      </label>
+    </div>
+
+
+    <button class="btn btn-lg btn-primary btn-block font-weight-bold" type="submit">Sign In</button>
     <p class="mt-4 mb-0 text-muted">© 2014-2020</p> 
   </form>
 

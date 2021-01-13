@@ -1,0 +1,55 @@
+<div class="container bg-light rounded-3 border px-4">
+
+<div class="row h-100">
+
+	<div class="col options py-4 h-100 overflow-auto">
+
+	{% for question in options %}
+
+		{% if question.type == "input-float" %}
+			{% include _input_float.html %}
+		{% endif %}
+
+	{% endfor %}
+
+	</div>
+
+
+
+	<div class="col choices py-4 h-100 overflow-auto">
+
+	{% for question in options %}
+	{% if question.choices %}
+	{% assign counter = 1 %}
+
+		<section data-for="{{ question.slug }}" class="inner">
+
+		{% for choice in question.choices %} 
+
+			<div class="form-check-flex form-control-lg custom-control custom-radio">
+			<input class="form-check-input custom-control-input" type="radio" name="{{ question.slug }}Options" id="{{ question.slug }}{{ counter }}" value="{{ question.slug }}{{ counter }}"{% if choice.selected %} checked="checked"{% endif %}>
+			<label class="form-check-label custom-control-label rounded-0" for="{{ question.slug }}{{ counter }}" onclick="advance('{{ question.slug }}');">{{ choice.value }} {% if choice.badge %}<span class="fs-6 badge rounded-pill text-primary bg-primary-10 fw-medium mx-2">{{ choice.badge }}</span>{% endif %}
+			{% if choice.tooltip %}
+				<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">
+					{{choice.tooltip}}
+				</div>
+			{% endif %}</label>
+				</div>
+
+		{% assign counter = counter | plus:1 %}
+		{% endfor %}
+
+		</section>
+
+	{% endif %}
+	{% endfor %}
+
+	</div>
+
+</div>
+
+
+
+
+
+</div> <!-- end main container -->

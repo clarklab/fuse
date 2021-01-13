@@ -1,5 +1,5 @@
 ---
-layout: skeleton.html
+layout: skeleton-customize.html
 
 roadmap:
   - label: Get Started
@@ -9,4 +9,99 @@ roadmap:
   - label: Apply
   - label: Drive
 
+options:
+  - question:
+    type: input-float
+    slug: trade
+    label: Trade Value
+    placeholder: What's your current car worth?
+  - question:
+    type: input-float
+    slug: zip
+    label: Customer Zip Code
+    placeholder: 55447
+    sparkle: true
+  - question:
+    type: input-float
+    slug: lease-type
+    label: Lease Type
+    placeholder: $0 Down Lease
+    sparkle: true
+    choices:
+    - value: 10% down
+      tooltip: You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.
+    - value: $0 down
+      selected: true
+      tooltip: You will <strong>not put any cash down</strong> to reduce the 'capitalized cost', but you will still need to come up with your first payment, tax, title, license and fees.
+    - value: Sign & Drive
+      tooltip: You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.
+    - value: One Pay
+      tooltip: You will come up with <strong>10% of the sale price</strong> to be used as 'capitalized cost' reduction plus your first payment, tax, title, license and fees.
+    - value: Custom
+  - question:
+    type: input-float
+    slug: lease-term
+    label: Lease Term
+    placeholder: 36 months
+    sparkle: true
+    selected: true
+    choices:
+    - value: Lowest Payment
+      selected: true
+    - value: 12 months
+    - value: 24 months
+    - value: 30 months
+    - value: 33 months
+    - value: 36 months
+      badge: Lowest Payment
+    - value: 39 months
+    - value: 42 months
+    - value: 48 months
+  - question:
+    type: input-float
+    slug: lease-mileage
+    label: Lease Mileage
+    placeholder: 12,000 miles/year
+    sparkle: true
+    choices:
+    - value: 7,500
+      selected: true
+    - value: 10,000
+    - value: 12,000
+      selected: true
+      tooltip: Suggested for you based on the average number of miles driven. Mileage is an important factor in lease pricing.
+    - value: 15,000
+    - value: 18,000
+    - value: 20,000
+    - value: Custom
+  - question:
+    type: input-float
+    slug: bank
+    label: Bank
+    placeholder: Compare All Lendors
+    sparkle: true
+  - question:
+    type: input-float
+    slug: credit-score
+    label: Credit Score
+    placeholder: Excellent (750+)
+    sparkle: true
+  - question:
+    type: input-float
+    slug: protection-products
+    label: Protection Products
+    placeholder: Customize your options
+  - question:
+    type: input-float
+    slug: accessories
+    label: Accessories and Upgrades
+    placeholder: Select your accessories
+  - question:
+    type: input-float
+    slug: rebates
+    label: Conditional Rebates and Coupons
+    placeholder: Select rebates and coupons
+
 ---
+
+here?
