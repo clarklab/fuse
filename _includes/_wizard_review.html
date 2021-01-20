@@ -1,0 +1,76 @@
+<div class="question" id="{{ question.slug }}">
+
+<div class="mb-4">
+
+<h2 class="text-primary text-center font-weight-bold">{{ question.ask }}</h2>
+
+{% if question.subtitle %}<p class="text-center">{{ question.subtitle }}</p>{% endif %}
+
+</div>
+
+<div class="container px-4">
+  <div class="row gx-5">
+    <div class="col">
+      <p class="text-bold text-uppercase text-primary m-0">Personal Info</p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Name</span>
+      	<span>Shandra Willis</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Nickname</span>
+      	<span>None</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Date of Birth</span>
+      	<span>12/19/1976</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Mobile Phone</span>
+      	<span>(512)545-0239</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Secondary Phone</span>
+      	<span>None</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Email</span>
+      	<span>shandra@willis.com</span>
+      </p>
+    </div>
+    
+    <div class="col">
+      <p class="text-bold text-uppercase text-primary m-0">Current Address</p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Street</span>
+      	<span>123 Elm Street West</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">City</span>
+      	<span>Round Rock</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">State</span>
+      	<span>Texas</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Zip</span>
+      	<span>78759</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">County</span>
+      	<span>Travis</span>
+      </p>
+      <p class="item d-flex justify-content-between border-bottom m-0 py-2">
+      	<span class="text-black-50">Duration</span>
+      	<span>1 year, 6 months</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<p class="text-center mt-4">
+	<a href="#" onclick="advance('{{ question.slug }}');">Next Step</a>
+</p>
+
+</div>

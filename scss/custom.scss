@@ -39,15 +39,15 @@ html {
 	line-height: 1;
 }
 
-.container, .overflow-auto {
+.main, .overflow-auto {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-.container::-webkit-scrollbar, .overflow-auto::-webkit-scrollbar { 
+.main::-webkit-scrollbar, .overflow-auto::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
 
-.container input, .container label{
+.main input, .main label{
 	cursor: pointer;
 }
 
@@ -239,7 +239,7 @@ html {
     border-right-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
 }
 
-.container {
+.main {
 	position: absolute;
 	left:6rem;
 	right:20rem;
@@ -247,6 +247,24 @@ html {
 	bottom:2rem;
 	overflow: scroll;
 	width:auto;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar { 
+	    display: none;  /* Safari and Chrome */
+	}
+	&.review{
+		overflow: hidden;
+	}
+}
+
+.scroller{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow: scroll;
 	scroll-behavior: smooth;
 	-ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -329,6 +347,28 @@ h1.currency__usd:before{
 	> :not(:last-child){
 		margin-bottom:-2px;
 	}
+}
+
+// REVIEW SHEET
+
+.review .numbers .item:last-child{
+	font-size:1.75rem
+}
+
+.review .action button:before {
+	 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #FFFFFF 100%);
+	 content:" ";
+	 display: block;
+	 position: absolute;
+	 top:-3rem;
+	 left:$spacer * 3;
+	 right:$spacer * 3;
+	 height: 3rem;
+	 pointer-events: none;
+}
+
+.review .numbers small{
+	opacity:0.5;
 }
 
 @import "../css/signin";

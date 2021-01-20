@@ -1,0 +1,32 @@
+
+<div class="question" id="{{ question.slug }}">
+
+    
+
+  <div class="row px-3 justify-content-center">
+
+    <div class="col-sm-5 text-center">
+    	{% include _art-paperwork.svg %}
+    
+    	<h2 class="text-primary text-center font-weight-bold mb-2">{{ question.ask }}</h2>
+    
+    	<p class="mb-3">{{question.subtitle}}</p>
+
+    	{% if question.label %}
+    	<div class="form-check mb-3">
+		  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+		  <label class="form-check-label" for="flexCheckDefault">
+		    {{ question.label }}
+		  </label>
+		</div>
+		{% endif %}
+		
+		<button type="button" class="btn btn-primary btn-lg" onclick="advance('{{ question.slug }}');">{{ question.button }}</button>
+      
+    	
+
+    </div>
+
+  </div>
+
+</div>

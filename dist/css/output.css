@@ -8117,17 +8117,17 @@ html {
 .line-height-1 {
   line-height: 1; }
 
-.container, .overflow-auto {
+.main, .overflow-auto {
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */
   scrollbar-width: none;
   /* Firefox */ }
 
-.container::-webkit-scrollbar, .overflow-auto::-webkit-scrollbar {
+.main::-webkit-scrollbar, .overflow-auto::-webkit-scrollbar {
   display: none;
   /* Safari and Chrome */ }
 
-.container input, .container label {
+.main input, .main label {
   cursor: pointer; }
 
 .question {
@@ -8277,7 +8277,7 @@ html {
 .bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
   border-right-color: rgba(6, 24, 187, 0.1) !important; }
 
-.container {
+.main {
   position: absolute;
   left: 6rem;
   right: 20rem;
@@ -8290,7 +8290,25 @@ html {
   /* Internet Explorer 10+ */
   scrollbar-width: none;
   /* Firefox */ }
-  .container::-webkit-scrollbar {
+  .main::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */ }
+  .main.review {
+    overflow: hidden; }
+
+.scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */ }
+  .scroller::-webkit-scrollbar {
     display: none;
     /* Safari and Chrome */ }
 
@@ -8352,6 +8370,23 @@ h1.currency__usd:before, .currency__usd.h1:before {
   border-bottom-right-radius: 10px; }
 .list-group > :not(:last-child) {
   margin-bottom: -2px; }
+
+.review .numbers .item:last-child {
+  font-size: 1.75rem; }
+
+.review .action button:before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #FFFFFF 100%);
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -3rem;
+  left: 3rem;
+  right: 3rem;
+  height: 3rem;
+  pointer-events: none; }
+
+.review .numbers small, .review .numbers .small {
+  opacity: 0.5; }
 
 html,
 body {

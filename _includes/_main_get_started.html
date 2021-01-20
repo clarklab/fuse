@@ -1,4 +1,4 @@
-<div class="container wizard bg-light rounded-3 border px-4">
+<div class="main wizard bg-light rounded-3 border px-4">
 
 <form>
 
@@ -12,6 +12,15 @@
 
   {% elsif question.type == "confirmation" %}
     {% include _wizard_confirmation.html %}
+
+  {% elsif question.type == "fieldset" %}
+    {% include _wizard_fieldset.html %}
+
+  {% elsif question.type == "review" %}
+    {% include _wizard_review.html %}
+
+  {% elsif question.type == "button-gate" %}
+    {% include _wizard_button_gate.html %}
 
   {% endif %}
   {% endfor %}

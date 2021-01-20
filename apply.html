@@ -26,6 +26,120 @@ wizard:
       content2: Start your <strong>credit application</strong> now
       content3: Lock in your deal for 3 days
   - question:
+    type: fieldset
+    slug: credit-1
+    ask: Who is the primary buyer?
+    rows:
+    - row:
+      - slug: legal-name-first
+        label: Legal First Name
+        placeholder: First Name
+      - slug: nickname
+        label: Preferred First Name
+        placeholder: Nickname
+      - slug: legal-name-middle
+        label: Legal Middle Name
+        placeholder: Middle Name
+    - row:
+      - slug: legal-name-last
+        label: Legal Last Name
+        placeholder: Last Name
+      - slug: dob
+        label: Date of Birth
+        placeholder: DD/MM/YYYY
+      - slug: ss
+        label: Social Security Number
+        placeholder: XXX-XX-XXXX
+  - question:
+    type: fieldset
+    slug: credit-2
+    ask: How can we contact you?
+    rows:
+    - row:
+      - slug: primary-phone
+        label: Primary Phone
+        placeholder: Mobile Phone
+      - slug: secondary-phone
+        label: Secondary Phone
+        placeholder: Home Phone
+      - slug: email
+        label: Email Address
+        placeholder: Email
+  - question:
+    type: fieldset
+    slug: credit-3
+    ask: Where do you currently live?
+    rows:
+    - row:
+      - slug: address
+        label: Street Address
+        placeholder: Enter your street address
+      - slug: city
+        label: City
+        placeholder: City
+    - row:
+      - slug: state
+        label: State
+        placeholder: State
+      - slug: zip
+        label: Zip
+        placeholder: Zip Code
+      - slug: county
+        label: County
+        placeholder: County
+  - question:
+    type: fieldset
+    slug: credit-4
+    ask: How long have you lived there?
+    rows:
+    - row:
+      - slug: years-at-address-1
+        label: Years
+        placeholder: Years
+      - slug: months-at-address-1
+        label: Months
+        placeholder: Months
+  - question:
+    type: fieldset
+    slug: credit-5
+    ask: Where did you live before that?
+    subtitle: Lenders require us to collect three years of residence history.
+    rows:
+    - row:
+      - slug: address
+        label: Street Address
+        placeholder: Enter your street address
+      - slug: city
+        label: City
+        placeholder: City
+    - row:
+      - slug: state
+        label: State
+        placeholder: State
+      - slug: zip
+        label: Zip
+        placeholder: Zip Code
+      - slug: county
+        label: County
+        placeholder: County
+  - question:
+    type: review
+    slug: review
+    ask: Let’s review! Is all this info correct?
+  - question:
+    type: button-gate
+    slug: approve-legal
+    ask: Confirm Application
+    subtitle: Before continuing, please review our <a href="#">disclosures and terms</a>. We will never sell or share your personal information. If you have any questions, you can call us at <strong>(952) 314-1391</strong>.
+    label: I have reviewed and agree to the disclosures
+    button: Continue
+  - question:
+    type: button-gate
+    slug: credit-approved
+    ask: Credit Approved!
+    subtitle: High five! Your credit application was approved. Next, <strong>we'll take a look at protection options</strong> that will safeguard your vehicle and your pocketbook...
+    button: Let's Go
+  - question:
     type: radio-simple
     slug: location
     ask: Where do you want to meet?

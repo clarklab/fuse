@@ -1,0 +1,34 @@
+<div class="question" id="{{ question.slug }}">
+
+<div class="mb-4">
+
+<h2 class="text-primary text-center font-weight-bold">{{ question.ask }}</h2>
+
+{% if question.subtitle %}<p class="text-center">{{ question.subtitle }}</p>{% endif %}
+
+</div>
+
+{% for each in question.rows %}
+<div class="row g-2 mb-2">
+
+
+	
+	{% for field in each.row %}
+
+	  <div class="col-md">
+	    <div class="form-floating">
+	      <input type="email" class="form-control rounded-3" id="{{field.slug}}" placeholder="{{field.placeholder}}" value="{{field.placeholder}}">
+	      <label for="{{field.slug}}" class="text-uppercase">{{field.label}}</label>
+	    </div>
+	  </div>
+
+	{% endfor %}
+  
+</div>
+{% endfor %}
+
+<p class="text-center mt-4">
+	<a href="#" onclick="advance('{{ question.slug }}');">Next Step</a>
+</p>
+
+</div>
