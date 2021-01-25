@@ -6,6 +6,8 @@
 		id="{{ question.slug }}"
 		placeholder="{{ question.placeholder }}"
 		value="{{ question.placeholder }}"
+		{% if question.modal %} data-bs-toggle="modal" data-bs-target="#productModal"
+		{% endif %}
 		onclick="choices('{{ question.slug }}');"
 		{% if question.selected %} autofocus{% endif %} readonly
 	>

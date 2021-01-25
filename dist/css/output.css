@@ -8228,15 +8228,17 @@ html {
 .col.options .form-control:not(:focus):not(.active)[readonly] {
   background-color: #FFFFFF; }
 
-.col.choices div:first-child label {
+.col.choices .inner > .form-check-flex:first-child label,
+.col.choices .inner > .form-floating:first-child input {
   border-top-right-radius: 10px !important;
   border-top-left-radius: 10px !important; }
 
-.col.choices div:last-child label {
+.col.choices .inner > .form-check-flex:last-child label,
+.col.choices .inner > .form-floating:last-child input {
   border-bottom-right-radius: 10px !important;
   border-bottom-left-radius: 10px !important; }
 
-.col.choices div:not(:first-child) {
+.col.choices .inner > *:not(:first-child) {
   margin-top: -2px; }
 
 .col.choices div input:checked + label {
@@ -8387,6 +8389,11 @@ h1.currency__usd:before, .currency__usd.h1:before {
 
 .review .numbers small, .review .numbers .small {
   opacity: 0.5; }
+
+.modal-backdrop {
+  background-color: #0618BB; }
+  .modal-backdrop.show {
+    opacity: 0.8; }
 
 html,
 body {

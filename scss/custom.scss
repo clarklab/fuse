@@ -178,15 +178,17 @@ html {
 	}
 }
 
-.col.choices div:first-child label{
-	border-top-right-radius: 10px !important;
-	border-top-left-radius: 10px !important;
+.col.choices .inner > .form-check-flex:first-child  label,
+.col.choices .inner > .form-floating:first-child input {
+	border-top-right-radius: $border-radius-lg !important;
+	border-top-left-radius: $border-radius-lg !important;
 }
-.col.choices div:last-child label{
-	border-bottom-right-radius: 10px !important;
-	border-bottom-left-radius: 10px !important;
+.col.choices .inner > .form-check-flex:last-child  label,
+.col.choices .inner > .form-floating:last-child input {
+	border-bottom-right-radius: $border-radius-lg !important;
+	border-bottom-left-radius: $border-radius-lg !important;
 }
-.col.choices div:not(:first-child) {
+.col.choices .inner > *:not(:first-child) {
 	margin-top:-2px;
 }
 .col.choices div input:checked + label{
@@ -369,6 +371,14 @@ h1.currency__usd:before{
 
 .review .numbers small{
 	opacity:0.5;
+}
+
+// MODAL
+
+.modal-backdrop{
+	background-color: map-get($theme-colors, "primary");
+
+	&.show{ opacity: 0.8; }
 }
 
 @import "../css/signin";

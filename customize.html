@@ -21,6 +21,13 @@ options:
     label: Customer Zip Code
     placeholder: 55447
     sparkle: true
+    choices:
+    - value: 55447
+      type: input
+      placeholder: Customer Zip Code
+    - value: Minneapolis, Hennepin
+    - value: Minneapolis (In-city), Hennepin
+    - value: Plymouth, Hennepin
   - question:
     type: input-float
     slug: lease-type
@@ -78,8 +85,16 @@ options:
     type: input-float
     slug: bank
     label: Bank
-    placeholder: Compare All Lendors
+    placeholder: Compare All Lenders
     sparkle: true
+    choices:
+    - value: Compare All Lenders
+      selected: true
+    - value: Subaru Motors Finance
+    - value: US Bank
+    - value: Ally
+    - value: Wells Fargo
+    - value: Capital One
   - question:
     type: input-float
     slug: credit-score
@@ -91,11 +106,13 @@ options:
     slug: protection-products
     label: Protection Products
     placeholder: Customize your options
+    modal: true
   - question:
     type: input-float
     slug: accessories
     label: Accessories and Upgrades
     placeholder: Select your accessories
+    modal: true
   - question:
     type: input-float
     slug: rebates

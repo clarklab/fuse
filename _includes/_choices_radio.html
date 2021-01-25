@@ -4,6 +4,30 @@
 
 {% for choice in question.choices %} 
 
+	
+
+	{% if choice.type == 'input' %}
+
+	<section class="form-floating">
+
+		<input
+			type="text"
+			class="form-control fw-bold rounded-0"
+			id="{{ question.slug }}"
+			placeholder="{{ choice.value }}"
+			value="{{ choice.value }}"
+			{% if question.selected %} autofocus{% endif %}
+		>
+		<label
+			for="{{ question.slug }}"
+			class="text-uppercase">
+			{{ choice.placeholder }}
+		</label>
+
+	</section>
+
+	{% else %}
+
 	<div class="form-check-flex form-control-lg custom-control custom-radio">
 
 	<input
@@ -28,6 +52,10 @@
 	</label>
 
 	</div>
+
+	{% endif %}
+
+	
 
 {% assign counter = counter | plus:1 %}
 {% endfor %}
