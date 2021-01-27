@@ -8,6 +8,7 @@ $border-radius:               .25rem !default;
 $border-radius-lg:            10px !default;
 $border-radius-sm:            .2rem !default;
 $card-border-radius:          $border-radius-lg;
+$small-font-size:             .85rem !default;
 
 $blue: #0618BB;
 $theme-colors: (
@@ -37,6 +38,10 @@ html {
 
 .line-height-1{
 	line-height: 1;
+}
+
+.bg-primary-10{
+	border-color:map-get($theme-colors, "primary-10");
 }
 
 .main, .overflow-auto {
@@ -70,16 +75,16 @@ html {
 	cursor: pointer;
 }
 
-.wizard .form-check-flex label:hover{
-	box-shadow: 0 0 10px rgba(map-get($theme-colors, "primary"), 0.2);
-	position: relative;
-	z-index: 9;
+.wizard	.form-check-flex label:hover{
+		box-shadow: 0 0 10px rgba(map-get($theme-colors, "primary"), 0.2);
+		position: relative;
+		z-index: 9;
 }
 
 .form-check-flex input:checked + label{
 	color: map-get($theme-colors, "primary");
-	border-color: map-get($theme-colors, "primary");
-	.wizard & {
+	border-color: map-get($theme-colors, "primary") !important;
+	.wizard &, .card__payment & {
 		box-shadow: 0px 0px 10px rgba(map-get($theme-colors, "primary"), 0.5);
 	}
 }
@@ -95,17 +100,21 @@ html {
 	transition:.2s ease all;
 }
 
-.form-check-flex input{
+.choices, .wizard {
+	.form-check-flex input{
 	margin:0;
 	left:$spacer*2;
 	top:50%;
 	transform:translateY(-50%);
 	z-index: 11;
 	position: absolute;
+	}
+}
 
-	.choices & {
-		top:1.5rem;
-		transform:none;
+.choices{
+	.form-check-flex input{
+	top:1.5rem;
+	transform:none;
 	}
 }
 
@@ -156,6 +165,10 @@ html {
 	z-index: 10;
 }
 
+.card__payment .form-check-flex input:checked + label{
+	
+}
+
 .form-check-flex.form-radio-bottom input{
 	position: absolute;
 	bottom:1rem;
@@ -178,13 +191,33 @@ html {
 	}
 }
 
+
+
+.col.choices{
+	.form-control{
+		border-color: $border-color;
+		&:focus{
+			border-color: map-get($theme-colors, "primary");
+			box-shadow: none;
+			z-index: 9;
+			position: relative;
+
+			+ label{
+				z-index: 10;
+			}
+		}
+	}
+}
+
 .col.choices .inner > .form-check-flex:first-child  label,
-.col.choices .inner > .form-floating:first-child input {
+.col.choices .inner > .form-floating:first-child input,
+.col.choices .inner > .content:first-child {
 	border-top-right-radius: $border-radius-lg !important;
 	border-top-left-radius: $border-radius-lg !important;
 }
 .col.choices .inner > .form-check-flex:last-child  label,
-.col.choices .inner > .form-floating:last-child input {
+.col.choices .inner > .form-floating:last-child input,
+.col.choices .inner > .content:last-child {
 	border-bottom-right-radius: $border-radius-lg !important;
 	border-bottom-left-radius: $border-radius-lg !important;
 }
@@ -244,7 +277,7 @@ html {
 .main {
 	position: absolute;
 	left:6rem;
-	right:20rem;
+	right:22rem;
 	top:calc(56px + 2rem);
 	bottom:2rem;
 	overflow: scroll;
@@ -276,7 +309,7 @@ html {
 }
 
 aside.sidebar{
-	width:16rem;
+	width:18rem;
 	position: absolute;
 	top:calc(56px + 2rem);
 	right:2rem; 
@@ -379,6 +412,17 @@ h1.currency__usd:before{
 	background-color: map-get($theme-colors, "primary");
 
 	&.show{ opacity: 0.8; }
+}
+
+// UTILITIES
+
+.rounded-end {
+    border-top-right-radius: $border-radius-lg !important;
+    border-bottom-right-radius: $border-radius-lg !important;
+}
+.rounded-start {
+    border-top-left-radius: $border-radius-lg !important;
+    border-bottom-left-radius: $border-radius-lg !important;
 }
 
 @import "../css/signin";

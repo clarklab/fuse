@@ -101,18 +101,29 @@ options:
     label: Credit Score
     placeholder: Excellent (750+)
     sparkle: true
+    content: <div class="d-grid my-2"><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#creditModal"><p class="small m-0 text-uppercase">Not Sure?</p><p class="fw-bold m-0">Look up your Credit Score</p><i class="bi bi-arrow-up-right-circle-fill position-absolute bottom-0 end-0 me-2 mb-2"></i></button></div> Your credit score is an important factor when considering your lease pricing. Better scores get better rates, so improving your score is a great way to get a great deal on a new ride.
+    choices:
+    - value: Excellent
+      selected: true
+      badge: 750+
+    - value: Very Good
+      badge: 725+
+    - value: Good
+      badge: 675+
+    - value: Fair
+      badge: 675-
   - question:
     type: input-float
     slug: protection-products
     label: Protection Products
     placeholder: Customize your options
-    modal: true
+    modal: product
   - question:
     type: input-float
     slug: accessories
     label: Accessories and Upgrades
     placeholder: Select your accessories
-    modal: true
+    modal: accessories
   - question:
     type: input-float
     slug: rebates

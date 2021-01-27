@@ -60,4 +60,8 @@
 {% assign counter = counter | plus:1 %}
 {% endfor %}
 
+{% if question.content %}
+<div class="content border p-3 bg-white">{{question.content}}</div>
+{% endif %}
+
 </section>

@@ -144,7 +144,7 @@ strong {
   font-weight: bolder; }
 
 small, .small {
-  font-size: 0.875em; }
+  font-size: 0.85rem; }
 
 mark, .mark {
   padding: 0.2em;
@@ -187,14 +187,14 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-  font-size: 0.875em; }
+  font-size: 0.85rem; }
   pre code {
     font-size: inherit;
     color: inherit;
     word-break: normal; }
 
 code {
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #d63384;
   word-wrap: break-word; }
   a > code {
@@ -202,7 +202,7 @@ code {
 
 kbd {
   padding: 0.2rem 0.4rem;
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #fff;
   background-color: #212529;
   border-radius: 0.2rem; }
@@ -431,7 +431,7 @@ progress {
     margin-right: 0.5rem; }
 
 .initialism {
-  font-size: 0.875em;
+  font-size: 0.85rem;
   text-transform: uppercase; }
 
 .blockquote {
@@ -443,7 +443,7 @@ progress {
 .blockquote-footer {
   margin-top: -1rem;
   margin-bottom: 1rem;
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #6c757d; }
   .blockquote-footer::before {
     content: "\2014\00A0"; }
@@ -468,7 +468,7 @@ progress {
   line-height: 1; }
 
 .figure-caption {
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #6c757d; }
 
 .container,
@@ -1699,7 +1699,7 @@ progress {
 
 .form-text {
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #6c757d; }
 
 .form-control {
@@ -2134,7 +2134,7 @@ textarea.form-control-lg {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #198754; }
 
 .valid-tooltip {
@@ -2197,7 +2197,7 @@ textarea.form-control-lg {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.85rem;
   color: #dc3545; }
 
 .invalid-tooltip {
@@ -8117,6 +8117,9 @@ html {
 .line-height-1 {
   line-height: 1; }
 
+.bg-primary-10 {
+  border-color: rgba(6, 24, 187, 0.1); }
+
 .main, .overflow-auto {
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */
@@ -8153,8 +8156,8 @@ html {
 
 .form-check-flex input:checked + label {
   color: #0618BB;
-  border-color: #0618BB; }
-  .wizard .form-check-flex input:checked + label {
+  border-color: #0618BB !important; }
+  .wizard .form-check-flex input:checked + label, .card__payment .form-check-flex input:checked + label {
     box-shadow: 0px 0px 10px rgba(6, 24, 187, 0.5); }
 
 .form-check-flex.form-control-lg {
@@ -8166,16 +8169,17 @@ html {
   padding-left: 5rem;
   transition: .2s ease all; }
 
-.form-check-flex input {
+.choices .form-check-flex input, .wizard .form-check-flex input {
   margin: 0;
   left: 2rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 11;
   position: absolute; }
-  .choices .form-check-flex input {
-    top: 1.5rem;
-    transform: none; }
+
+.choices .form-check-flex input {
+  top: 1.5rem;
+  transform: none; }
 
 .form-floating input {
   font-size: 1.25rem; }
@@ -8228,13 +8232,25 @@ html {
 .col.options .form-control:not(:focus):not(.active)[readonly] {
   background-color: #FFFFFF; }
 
+.col.choices .form-control {
+  border-color: #C4C4C4; }
+  .col.choices .form-control:focus {
+    border-color: #0618BB;
+    box-shadow: none;
+    z-index: 9;
+    position: relative; }
+    .col.choices .form-control:focus + label {
+      z-index: 10; }
+
 .col.choices .inner > .form-check-flex:first-child label,
-.col.choices .inner > .form-floating:first-child input {
+.col.choices .inner > .form-floating:first-child input,
+.col.choices .inner > .content:first-child {
   border-top-right-radius: 10px !important;
   border-top-left-radius: 10px !important; }
 
 .col.choices .inner > .form-check-flex:last-child label,
-.col.choices .inner > .form-floating:last-child input {
+.col.choices .inner > .form-floating:last-child input,
+.col.choices .inner > .content:last-child {
   border-bottom-right-radius: 10px !important;
   border-bottom-left-radius: 10px !important; }
 
@@ -8282,7 +8298,7 @@ html {
 .main {
   position: absolute;
   left: 6rem;
-  right: 20rem;
+  right: 22rem;
   top: calc(56px + 2rem);
   bottom: 2rem;
   overflow: scroll;
@@ -8315,7 +8331,7 @@ html {
     /* Safari and Chrome */ }
 
 aside.sidebar {
-  width: 16rem;
+  width: 18rem;
   position: absolute;
   top: calc(56px + 2rem);
   right: 2rem; }
@@ -8394,6 +8410,14 @@ h1.currency__usd:before, .currency__usd.h1:before {
   background-color: #0618BB; }
   .modal-backdrop.show {
     opacity: 0.8; }
+
+.rounded-end {
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important; }
+
+.rounded-start {
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important; }
 
 html,
 body {
