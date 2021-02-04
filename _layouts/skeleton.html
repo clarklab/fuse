@@ -67,6 +67,11 @@ function choices(el) {
 
 $("[autofocus]").click();
 
+$( ".toggle" ).on( "click", function() {
+  $(".toggle").addClass("text-muted");
+  $(this).removeClass("text-muted");
+  return false;
+});
 
 
 </script>

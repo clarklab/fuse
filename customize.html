@@ -15,6 +15,14 @@ options:
     slug: trade
     label: Trade Value
     placeholder: What's your current car worth?
+    content: If you know your current vehicle value, please enter it above. If you still owe money, add a vehicle payoff. <div class="d-grid my-2"><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#tradeModal"><p class="small m-0 text-uppercase">Not Sure?</p><p class="fw-bold m-0">Look Up Vehicle Value</p><i class="bi bi-arrow-up-right-circle-fill position-absolute bottom-0 end-0 me-2 mb-2"></i></button><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative mt-3" type="button" data-bs-toggle="modal" data-bs-target="#creditModal"><p class="small m-0 text-uppercase">More than one?</p><p class="fw-bold m-0">+ Add Another Vehicle</p></button></div>
+    choices:
+    - value: $
+      type: input
+      placeholder: Vehicle Value
+    - value: $
+      type: input
+      placeholder: Payoff
   - question:
     type: input-float
     slug: zip
@@ -130,5 +138,100 @@ options:
     label: Conditional Rebates and Coupons
     placeholder: Select rebates and coupons
 
+trade:
+  - question:
+    type: input-float
+    slug: trade-year
+    label: Year
+    placeholder: Select vehicle year
+    choices:
+    - value: 2021
+    - value: 2020
+    - value: 2019
+    - value: 2018
+    - value: 2017
+    - value: 2016
+    - value: 2015
+    - value: 2014
+    - value: 2013
+    - value: 2012
+    - value: 2011
+    - value: 2010
+  - question:
+    type: input-float
+    slug: trade-make
+    label: Brand
+    placeholder: Select vehicle brand
+    choices:
+    - value: Acura
+    - value: Alfa Romeo
+    - value: Ashton Martin
+    - value: Audi
+    - value: Bentley
+    - value: BMW
+    - value: Bugatti
+    - value: Buick
+    - value: Cadillac
+  - question:
+    type: input-float
+    slug: trade-model
+    label: Model
+    placeholder: Select vehicle model
+    choices:
+    - value: Ascent
+    - value: BRZ
+    - value: Crosstrek
+    - value: Forester
+    - value: Impreza
+    - value: Legacy
+    - value: Outback
+    - value: WRX
+  - question:
+    type: input-float
+    slug: trade-trim
+    label: Trim
+    placeholder: Select vehicle trim
+    choices:
+    - value: Sport Wagon 4D
+    - value: Premium Wagon 4D
+    - value: Limited Wagon 4D
+    - value: Limited Sedan 4D
+    - value: Premium Sedan 4D
+    - value: Wagon 4D
+  - question:
+    type: input-float
+    slug: trade-mileage
+    label: Mileage
+    placeholder: Select vehicle mileage
+    content: How many miles are on your current vehicle? If you don’t know, you might want to go check your odometer. <ul class="my-2"><li>Mileage is an important...</li><li>Some other information about mileage</li></ul>Maybe a conclusion statement or paragraph to cap things off. Safe driving!
+    choices:
+    - value: 35,650
+      type: input
+      placeholder: Current Mileage
+  - question:
+    type: input-float
+    slug: trade-condition
+    label: Condition
+    placeholder: Select vehicle condition
+    choices:
+    - value: Excellent
+      selected: true
+      tooltip: Looks new and is in excellent mechanical condition. <strong>3% of cars KBB values</strong>
+    - value: Very Good
+      tooltip: Has minor cosmetic defects and is in excellent mechanical condition. <strong>23% of cars KBB values</strong>
+    - value: Good
+      tooltip: Has some repairable cosmetic defects and is free of major mechanical issues. <strong>54% of cars KBB values</strong>
+    - value: Fair
+      tooltip: Has some cosmetic defects that require repair and or replacing. <strong>18% of cars KBB values</strong>
+  - question:
+    type: input-float
+    slug: trade-payoff
+    label: Payoff
+    placeholder: Select remaining payoff
+    content: Are you still paying for your current vehicle? If so, enter that amount here. If not, hit the button below to continue. <ul class="my-2"><li>Payoff value will be...</li><li>Some other information about payoff</li></ul>Maybe a conclusion statement or paragraph to cap things off. Safe driving! <div class="d-grid my-2"><button class="btn btn-primary btn-lg border-0 py-2" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#tradeResultModal"><p class="fw-bold m-0">Estimate Value</p></button></div>
+    choices:
+    - value: $
+      type: input
+      placeholder: Payoff Amount
 ---
 

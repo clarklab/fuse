@@ -1,4 +1,10 @@
-<p class="small text-uppercase mt-3 mb-1">Payment Options</p>
+<div class="d-flex justify-content-between small text-uppercase mt-3 mb-2 fw-bold">
+  <span>SORT</span>
+  <a href="" class="toggle text-decoration-none">PAYMENT</a>
+  <a href="" class="toggle text-decoration-none text-muted">APR</a>
+  <a href="" class="toggle text-decoration-none text-muted">SELLING PRICE</a>
+</div>
+
 <div id="cardID1" class="card__payment mb-2">
   <div class="form-check-flex">
     <input class="form-check-input position-absolute mt-3 ms-3" type="radio" name="paymentSelected" id="paymentSelected1" checked="checked">
@@ -42,3 +48,7 @@
     </label>
   </div>
 </div>
+
+<a href="#" class="d-block text-decoration-none text-muted text-end" data-bs-toggle="modal" data-bs-target="#paymentModal">
+  Explore Payment Options <i class="bi bi-arrow-up-right-circle-fill"></i>
+</a>
