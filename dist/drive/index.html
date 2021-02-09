@@ -176,7 +176,7 @@
 
 
 
-<aside class="sidebar">
+<aside class="sidebar d-flex flex-column">
 
   
   <div class="card card__desking_sidebar mb-3"> 
@@ -203,6 +203,8 @@
 
 
 
+
+<div class="overflow-auto shade-bottom">
 
 <div class="d-flex justify-content-between small text-uppercase mt-3 mb-2 fw-bold">
   <span>SORT</span>
@@ -255,6 +257,72 @@
   </div>
 </div>
 
+<div id="cardID3" class="card__payment mb-2">
+  <div class="form-check-flex">
+    <input class="form-check-input position-absolute mt-3 ms-3" type="radio" name="paymentSelected" id="paymentSelected3">
+    <label class="form-check-label w-100 px-3 py-2 border rounded-3" for="paymentSelected3">
+      <div class="d-flex justify-content-between mt-1 mb-1 ps-4 align-items-center">
+        <img src="../img/logo-ally.png" height="20" alt="">
+        <small class="sparkle d-none">Lowest Payment</small>
+      </div>
+      <div class="d-flex justify-content-between mb-0">
+        <small class="line-height-1 pt-1">Your Lease<br />Payment</small>
+        <h1 class="m-0 currency__usd line-height-1 odometer tabular">364</h1>
+      </div>
+      <div class="d-flex justify-content-between">
+        <small>Due at signing</small>
+        <h6 class="m-0 currency__usd tabular">1,589</h6>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="cardID4" class="card__payment mb-2">
+  <div class="form-check-flex">
+    <input class="form-check-input position-absolute mt-3 ms-3" type="radio" name="paymentSelected" id="paymentSelected4">
+    <label class="form-check-label w-100 px-3 py-2 border rounded-3" for="paymentSelected4">
+      <div class="d-flex justify-content-between mt-1 mb-1 ps-4 align-items-center">
+        <img src="../img/logo-us-bank.png" height="20" alt="">
+        <small class="sparkle d-none">Lowest Payment</small>
+      </div>
+      <div class="d-flex justify-content-between mb-0">
+        <small class="line-height-1 pt-1">Your Lease<br />Payment</small>
+        <h1 class="m-0 currency__usd line-height-1 odometer tabular">378</h1>
+      </div>
+      <div class="d-flex justify-content-between">
+        <small>Due at signing</small>
+        <h6 class="m-0 currency__usd tabular">1,589</h6>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="cardID5" class="card__payment mb-4">
+  <div class="form-check-flex">
+    <input class="form-check-input position-absolute mt-3 ms-3" type="radio" name="paymentSelected" id="paymentSelected5">
+    <label class="form-check-label w-100 px-3 py-2 border rounded-3" for="paymentSelected5">
+      <div class="d-flex justify-content-between mt-1 mb-1 ps-4 align-items-center">
+        <img src="../img/logo-us-bank.png" height="20" alt="">
+        <small class="sparkle d-none">Lowest Payment</small>
+      </div>
+      <div class="d-flex justify-content-between mb-0">
+        <small class="line-height-1 pt-1">Your Lease<br />Payment</small>
+        <h1 class="m-0 currency__usd line-height-1 odometer tabular">391</h1>
+      </div>
+      <div class="d-flex justify-content-between">
+        <small>Due at signing</small>
+        <h6 class="m-0 currency__usd tabular">1,589</h6>
+      </div>
+    </label>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
 <a href="#" class="d-block text-decoration-none text-muted text-end" data-bs-toggle="modal" data-bs-target="#paymentModal">
   Explore Payment Options <i class="bi bi-arrow-up-right-circle-fill"></i>
 </a>
@@ -289,7 +357,6 @@ $( ".toggle" ).on( "click", function() {
   $(this).removeClass("text-muted");
   return false;
 });
-
 
 </script>
 

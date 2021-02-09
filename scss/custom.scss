@@ -312,7 +312,8 @@ aside.sidebar{
 	width:18rem;
 	position: absolute;
 	top:calc(56px + 2rem);
-	right:2rem; 
+	right:2rem;
+	bottom:2rem; 
 }
 
 .roadmap{
@@ -423,6 +424,18 @@ h1.currency__usd:before{
 .rounded-start {
     border-top-left-radius: $border-radius-lg !important;
     border-bottom-left-radius: $border-radius-lg !important;
+}
+
+.shade-bottom:before{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:1.5rem;
+	height:3rem;
+	content:" ";
+	display: block;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+	z-index: 10;
 }
 
 @import "../css/signin";
