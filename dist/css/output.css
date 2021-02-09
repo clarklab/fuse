@@ -8169,7 +8169,7 @@ html {
   padding-left: 5rem;
   transition: .2s ease all; }
 
-.choices .form-check-flex input, .wizard .form-check-flex input {
+.choices .form-check-flex input, .wizard .form-check-flex input, .tabs .form-check-flex input {
   margin: 0;
   left: 2rem;
   top: 50%;
@@ -8193,6 +8193,16 @@ html {
   padding-left: 1rem;
   padding-bottom: 3rem;
   border-radius: 0; }
+
+.tabs .col:nth-child(2) {
+  margin-left: -2px;
+  margin-right: -2px; }
+
+.tabs .form-check-flex input:checked + label {
+  border-right-width: 2px !important;
+  border-left-width: 2px !important;
+  z-index: 10;
+  position: relative; }
 
 .col:nth-child(2) .form-check-flex.form-radio-bottom label {
   border-right-width: 0;
@@ -8313,6 +8323,17 @@ html {
     /* Safari and Chrome */ }
   .main.review {
     overflow: hidden; }
+  .main.customize {
+    padding-top: 4rem; }
+
+.tabs {
+  top: calc(56px + 2rem);
+  left: 6rem;
+  right: 22rem; }
+  .tabs .col:first-child label {
+    border-top-left-radius: 10px !important; }
+  .tabs .col:last-child label {
+    border-top-right-radius: 10px !important; }
 
 .scroller {
   position: absolute;
@@ -8428,6 +8449,9 @@ h1.currency__usd:before, .currency__usd.h1:before {
   display: block;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
   z-index: 10; }
+
+.z-index-top {
+  z-index: 12; }
 
 html,
 body {

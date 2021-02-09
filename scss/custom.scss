@@ -100,7 +100,7 @@ html {
 	transition:.2s ease all;
 }
 
-.choices, .wizard {
+.choices, .wizard, .tabs {
 	.form-check-flex input{
 	margin:0;
 	left:$spacer*2;
@@ -137,6 +137,24 @@ html {
 	padding-left:1rem;
 	padding-bottom:3rem;
 	border-radius: 0;
+}
+
+.tabs .col:first-child .form-check-flex label{
+	
+}
+.tabs .col:nth-child(2){
+	margin-left:-$border-width;
+	margin-right:-$border-width;
+}
+.tabs .col:last-child .form-check-flex label{
+	
+}
+
+.tabs .form-check-flex input:checked + label{
+	border-right-width: $border-width !important;
+	border-left-width: $border-width !important;
+	z-index: 10;
+	position: relative;
 }
 
 .col:nth-child(2) .form-check-flex.form-radio-bottom label{
@@ -291,6 +309,21 @@ html {
 	&.review{
 		overflow: hidden;
 	}
+	&.customize{
+		padding-top:4rem;
+	}
+}
+
+.tabs{
+	top:calc(56px + 2rem);
+	left:6rem;
+	right:22rem;
+	.col:first-child label{
+		border-top-left-radius: $border-radius-lg !important;
+	}
+	.col:last-child label{
+		border-top-right-radius: $border-radius-lg !important;
+	}
 }
 
 .scroller{
@@ -436,6 +469,10 @@ h1.currency__usd:before{
 	display: block;
 	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
 	z-index: 10;
+}
+
+.z-index-top{
+	z-index: 12;
 }
 
 @import "../css/signin";
