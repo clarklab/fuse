@@ -410,7 +410,7 @@ h1.currency__usd:before{
 // MODAL
 
 .modal-backdrop{
-	background-color: map-get($theme-colors, "primary");
+	background-color: map-get($theme-colors, "black");
 
 	&.show{ opacity: 0.8; }
 }

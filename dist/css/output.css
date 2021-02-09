@@ -8407,10 +8407,8 @@ h1.currency__usd:before, .currency__usd.h1:before {
 .review .numbers small, .review .numbers .small {
   opacity: 0.5; }
 
-.modal-backdrop {
-  background-color: #0618BB; }
-  .modal-backdrop.show {
-    opacity: 0.8; }
+.modal-backdrop.show {
+  opacity: 0.8; }
 
 .rounded-end {
   border-top-right-radius: 10px !important;
