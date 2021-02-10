@@ -44,6 +44,10 @@
 		onclick="advance('{{ question.slug }}');">
 
 	{{ choice.value }} {% if choice.badge %}<span class="fs-6 badge rounded-pill text-primary bg-primary-10 fw-medium mx-2">{{ choice.badge }}</span>{% endif %}
+
+	{% if choice.choices %}
+	{% include _nested_fields.html %}
+	{% endif %}
 	
 	{% if choice.tooltip %}
 		<div class="fs-6 tip text-primary bg-primary-10 fw-medium rounded-3 px-3 py-2 mt-3">{{choice.tooltip}}</div>

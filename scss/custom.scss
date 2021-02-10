@@ -65,7 +65,7 @@ html {
 	position:relative;
 }
 
-.form-check-flex label{
+.form-check-flex > label{
 	width:100%;
 	border:2px solid $border-color;
 	border-radius: $border-radius-lg;
@@ -93,15 +93,18 @@ html {
 	padding:0;
 	height:auto;
 }
+.form-control-lg .form-floating label{
+	font-size:1rem;
+}
 
-.form-check-flex.form-control-lg label{
+.form-check-flex.form-control-lg > label{
 	padding:$spacer;
 	padding-left:$spacer*5;
 	transition:.2s ease all;
 }
 
 .choices, .wizard, .tabs {
-	.form-check-flex input{
+	.form-check-flex input[type="radio"]{
 	margin:0;
 	left:$spacer*2;
 	top:50%;
@@ -112,7 +115,7 @@ html {
 }
 
 .choices{
-	.form-check-flex input{
+	.form-check-flex input[type="radio"]{
 	top:1.5rem;
 	transform:none;
 	}
@@ -211,7 +214,7 @@ html {
 
 
 
-.col.choices{
+.choices{
 	.form-control{
 		border-color: $border-color;
 		&:focus{
@@ -227,27 +230,27 @@ html {
 	}
 }
 
-.col.choices .inner > .form-check-flex:first-child  label,
-.col.choices .inner > .form-floating:first-child input,
-.col.choices .inner > .content:first-child {
+.choices .inner > .form-check-flex:first-child > label,
+.choices .inner > .form-floating:first-child input,
+.choices .inner > .content:first-child {
 	border-top-right-radius: $border-radius-lg !important;
 	border-top-left-radius: $border-radius-lg !important;
 }
-.col.choices .inner > .form-check-flex:last-child  label,
-.col.choices .inner > .form-floating:last-child input,
-.col.choices .inner > .content:last-child {
+.choices .inner > .form-check-flex:last-child > label,
+.choices .inner > .form-floating:last-child input,
+.choices .inner > .content:last-child {
 	border-bottom-right-radius: $border-radius-lg !important;
 	border-bottom-left-radius: $border-radius-lg !important;
 }
-.col.choices .inner > *:not(:first-child) {
+.choices .inner > *:not(:first-child) {
 	margin-top:-2px;
 }
-.col.choices div input:checked + label{
+.choices div input:checked + label{
 	z-index: 9;
 	position: relative;
 }
 
-.col.choices {
+.choices {
 
 	.inner{
 		display: none;
@@ -262,7 +265,16 @@ html {
 		width:calc(100% + 4rem);
 		margin-left:-4rem;
 	}
+	.choices.nested{
+		display: none;
+		width:calc(100% + 4rem);
+		margin-left:-4rem;
+	}
 	input:checked + label .tip{
+		display: block;
+	}
+	input:checked + label .choices.nested,
+	input:checked + label .choices.nested .inner{
 		display: block;
 	}
 }

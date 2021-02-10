@@ -8140,7 +8140,7 @@ html {
 .form-check-flex {
   position: relative; }
 
-.form-check-flex label {
+.form-check-flex > label {
   width: 100%;
   border: 2px solid #C4C4C4;
   border-radius: 10px;
@@ -8164,12 +8164,15 @@ html {
   padding: 0;
   height: auto; }
 
-.form-check-flex.form-control-lg label {
+.form-control-lg .form-floating label {
+  font-size: 1rem; }
+
+.form-check-flex.form-control-lg > label {
   padding: 1rem;
   padding-left: 5rem;
   transition: .2s ease all; }
 
-.choices .form-check-flex input, .wizard .form-check-flex input, .tabs .form-check-flex input {
+.choices .form-check-flex input[type="radio"], .wizard .form-check-flex input[type="radio"], .tabs .form-check-flex input[type="radio"] {
   margin: 0;
   left: 2rem;
   top: 50%;
@@ -8177,7 +8180,7 @@ html {
   z-index: 11;
   position: absolute; }
 
-.choices .form-check-flex input {
+.choices .form-check-flex input[type="radio"] {
   top: 1.5rem;
   transform: none; }
 
@@ -8242,44 +8245,51 @@ html {
 .col.options .form-control:not(:focus):not(.active)[readonly] {
   background-color: #FFFFFF; }
 
-.col.choices .form-control {
+.choices .form-control {
   border-color: #C4C4C4; }
-  .col.choices .form-control:focus {
+  .choices .form-control:focus {
     border-color: #0618BB;
     box-shadow: none;
     z-index: 9;
     position: relative; }
-    .col.choices .form-control:focus + label {
+    .choices .form-control:focus + label {
       z-index: 10; }
 
-.col.choices .inner > .form-check-flex:first-child label,
-.col.choices .inner > .form-floating:first-child input,
-.col.choices .inner > .content:first-child {
+.choices .inner > .form-check-flex:first-child > label,
+.choices .inner > .form-floating:first-child input,
+.choices .inner > .content:first-child {
   border-top-right-radius: 10px !important;
   border-top-left-radius: 10px !important; }
 
-.col.choices .inner > .form-check-flex:last-child label,
-.col.choices .inner > .form-floating:last-child input,
-.col.choices .inner > .content:last-child {
+.choices .inner > .form-check-flex:last-child > label,
+.choices .inner > .form-floating:last-child input,
+.choices .inner > .content:last-child {
   border-bottom-right-radius: 10px !important;
   border-bottom-left-radius: 10px !important; }
 
-.col.choices .inner > *:not(:first-child) {
+.choices .inner > *:not(:first-child) {
   margin-top: -2px; }
 
-.col.choices div input:checked + label {
+.choices div input:checked + label {
   z-index: 9;
   position: relative; }
 
-.col.choices .inner {
+.choices .inner {
   display: none; }
-  .col.choices .inner.active {
+  .choices .inner.active {
     display: block; }
-.col.choices .tip {
+.choices .tip {
   display: none;
   width: calc(100% + 4rem);
   margin-left: -4rem; }
-.col.choices input:checked + label .tip {
+.choices .choices.nested {
+  display: none;
+  width: calc(100% + 4rem);
+  margin-left: -4rem; }
+.choices input:checked + label .tip {
+  display: block; }
+.choices input:checked + label .choices.nested,
+.choices input:checked + label .choices.nested .inner {
   display: block; }
 
 .question .custom-control-label::before, .question .custom-control-label::after {
