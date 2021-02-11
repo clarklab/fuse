@@ -674,8 +674,6 @@
     
      
 
-    
-
     <div class="col">
       <div class="form-check-flex form-control-lg custom-control custom-radio">
         
@@ -686,8 +684,6 @@
 
     
      
-
-    
 
     <div class="col">
       <div class="form-check-flex form-control-lg custom-control custom-radio">
@@ -901,8 +897,9 @@
 
 
 <script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
 function advance(el) {

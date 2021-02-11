@@ -8,10 +8,8 @@
     {% assign counter = 1 %}
     {% for choice in question.choices %} 
 
-    
-
     <div class="col">
-      <div class="form-check-flex form-control-lg custom-control custom-radio"{% if choice.tooltip %} data-toggle="tooltip" data-placement="bottom" data-html="true" title="{{ choice.tooltip }}"{% endif %}>
+      <div class="form-check-flex form-control-lg custom-control custom-radio"{% if choice.tooltip %}data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ choice.tooltip }}"{% endif %}>
         {{ choice.toolip }}
         <input class="form-check-input custom-control-input" type="radio" name="{{ question.slug }}Options" id="{{ question.slug }}{{ counter }}" value="{{ question.slug }}{{ counter }}"{% if choice.selected %} checked="checked"{% endif %}>
         <label class="form-check-label custom-control-label" for="{{ question.slug }}{{ counter }}" onclick="advance('{{ question.slug }}');">{{ choice.value }}</label>

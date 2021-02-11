@@ -8242,7 +8242,7 @@ html {
   position: relative;
   z-index: 10; }
 
-.form-check-flex.form-radio-bottom input {
+.wizard .form-check-flex.form-radio-bottom input[type="radio"] {
   position: absolute;
   bottom: 1rem;
   top: auto;
@@ -8312,24 +8312,12 @@ html {
   top: calc(50% - 8px);
   left: 10%; }
 
-.tooltip {
-  margin-top: .5rem; }
-
 .tooltip .tooltip-inner {
   color: #0618BB;
   background-color: rgba(6, 24, 187, 0.1); }
 
-.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[data-popper-placement^="bottom"] .arrow::before {
+.tooltip-arrow::before {
   border-bottom-color: rgba(6, 24, 187, 0.1) !important; }
-
-.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before, .bs-tooltip-auto[data-popper-placement^="top"] .arrow::before {
-  border-top-color: rgba(6, 24, 187, 0.1) !important; }
-
-.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
-  border-left-color: rgba(6, 24, 187, 0.1) !important; }
-
-.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
-  border-right-color: rgba(6, 24, 187, 0.1) !important; }
 
 .main {
   position: absolute;

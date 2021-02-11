@@ -179,8 +179,6 @@
     
      
 
-    
-
     <div class="col">
       <div class="form-check-flex form-control-lg custom-control custom-radio">
         
@@ -191,8 +189,6 @@
 
     
      
-
-    
 
     <div class="col">
       <div class="form-check-flex form-control-lg custom-control custom-radio">
@@ -223,8 +219,6 @@
     
      
 
-    
-
     <div class="col">
       <div class="form-check-flex form-control-lg custom-control custom-radio">
         
@@ -236,10 +230,8 @@
     
      
 
-    
-
     <div class="col">
-      <div class="form-check-flex form-control-lg custom-control custom-radio" data-toggle="tooltip" data-placement="bottom" data-html="true" title="FUSE can make smart choices for you. Look for the ✦ symbol, or change to match your needs...">
+      <div class="form-check-flex form-control-lg custom-control custom-radio"data-bs-toggle="tooltip" data-bs-placement="bottom" title="FUSE can make smart choices for you. Look for the ✦ symbol, or change to match your needs...">
         
         <input class="form-check-input custom-control-input" type="radio" name="mileageOptions" id="mileage2" value="mileage2" checked="checked">
         <label class="form-check-label custom-control-label" for="mileage2" onclick="advance('mileage');">12,000</label>
@@ -248,8 +240,6 @@
 
     
      
-
-    
 
     <div class="col">
       <div class="form-check-flex form-control-lg custom-control custom-radio">
@@ -432,8 +422,9 @@
 
 
 <script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
 function advance(el) {

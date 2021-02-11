@@ -206,7 +206,7 @@ html {
 	
 }
 
-.form-check-flex.form-radio-bottom input{
+.wizard .form-check-flex.form-radio-bottom input[type="radio"]{
 	position: absolute;
 	bottom:1rem;
 	top:auto;
@@ -305,25 +305,15 @@ html {
 	left:10%;
 }
 
-.tooltip {margin-top:.5rem}
-
 .tooltip .tooltip-inner{
 	color:map-get($theme-colors, "primary");
 	background-color:rgba(map-get($theme-colors, "primary"), 0.1);
 }
 
-.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+.tooltip-arrow::before {
     border-bottom-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
 }
-.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
-    border-top-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
-}
-.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
-    border-left-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
-}
-.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
-    border-right-color: rgba(map-get($theme-colors, "primary"), 0.1) !important;
-}
+
 
 .main {
 	position: absolute;
