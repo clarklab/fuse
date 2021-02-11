@@ -516,6 +516,10 @@ h1.currency__usd:before{
 	opacity: 0 !important;
 }
 
+.modal-body .vh-fit{
+	height: calc(100vh - 20rem);
+}
+
 @import "../css/signin";
 @import "../css/brand-subaru"; 
 

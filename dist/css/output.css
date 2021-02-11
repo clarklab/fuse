@@ -8484,6 +8484,9 @@ h1.currency__usd:before, .currency__usd.h1:before {
 .opacity-0 {
   opacity: 0 !important; }
 
+.modal-body .vh-fit {
+  height: calc(100vh - 20rem); }
+
 html,
 body {
   height: 100%; }
