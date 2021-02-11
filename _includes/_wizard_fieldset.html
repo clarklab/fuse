@@ -1,5 +1,13 @@
 <div class="question" id="{{ question.slug }}">
 
+{% if question.image %}
+<div class="row align-items-center">
+	<div class="col">
+		<img class="img-fluid" src="../img/{{ question.image }}" alt="">
+	</div>
+	<div class="col">
+{% endif %}
+
 <div class="mb-4">
 
 <h2 class="text-primary text-center font-weight-bold">{{ question.ask }}</h2>
@@ -28,7 +36,18 @@
 {% endfor %}
 
 <p class="text-center mt-4">
-	<a href="#" onclick="advance('{{ question.slug }}');">Next Step</a>
+	<a href="#" {% if question.button %}class="btn btn-primary btn-lg w-100"{% endif %} onclick="advance('{{ question.slug }}');">Next Step</a>
 </p>
+
+{% if question.footer %}
+	<p class="text-center mt-4 text-black-50 small">
+		{{question.footer}}
+	</p>
+{% endif %}
+
+{% if question.image %}
+</div>
+</div>
+{% endif %}
 
 </div>
