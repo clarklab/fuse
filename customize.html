@@ -55,9 +55,17 @@ options:
     - value: Custom
       tooltip: Use the 'custom' lease type to define your total due at signing <strong>OR</strong> your desired monthly payment.
       choices:
-      - value: Total Due at Signing
+      - value: $
+        type: input
+        radio: true
+        placeholder: Total Due at Signing
+        nested: true
         selected: true
-      - value: Desired Monthly Payment
+      - value: $
+        type: input
+        radio: true
+        placeholder: Desired Monthly Payment
+        nested: true
   - question:
     type: input-float
     slug: lease-term

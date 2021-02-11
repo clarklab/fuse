@@ -8180,7 +8180,10 @@ html {
   z-index: 11;
   position: absolute; }
 
-.choices .form-check-flex input[type="radio"] {
+.choices .radio-added input[type="radio"] {
+  left: 1rem !important; }
+
+.choices .form-check-flex > input[type="radio"] {
   top: 1.5rem;
   transform: none; }
 
@@ -8191,6 +8194,9 @@ html {
 .form-floating.sparkle:before {
   left: 2rem;
   bottom: 0.75rem; }
+
+.choices.nested .form-floating > .form-control:focus ~ label, .choices.nested .form-floating > .form-control:not(:placeholder-shown) ~ label, .choices.nested .form-floating > .form-select ~ label {
+  opacity: 1; }
 
 .form-check-flex.form-radio-bottom label {
   padding-left: 1rem;
@@ -8462,6 +8468,20 @@ h1.currency__usd:before, .currency__usd.h1:before {
 
 .z-index-top {
   z-index: 12; }
+
+.text-indent-1 {
+  text-indent: 1rem; }
+
+.text-indent-2 {
+  text-indent: 2rem; }
+
+.text-indent-3 {
+  text-indent: 3rem; }
+  .text-indent-3.text-uppercase {
+    margin-left: 0.5rem; }
+
+.text-indent-4 {
+  text-indent: 4rem; }
 
 html,
 body {

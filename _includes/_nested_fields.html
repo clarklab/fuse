@@ -3,42 +3,20 @@
 <section class="inner">
 
 
-	<div class="form-check-flex form-control-lg custom-control custom-radio">
 
-	<input class="form-check-input custom-control-input" type="radio" name="nestedOptions" id="nested1" value="nested1" checked="checked">
-	
-	<label class="form-check-label custom-control-label rounded-0" for="nested1">
+{% for choice in choice.choices %}
 
-	Total Due at Signing 
-	
-	
+	{% if choice.type == 'input' %}
 
-	</label>
+		{% include _choices_input_float.html %}
 
-	</div>
-	
+	{% else %}
 
-	<div class="form-check-flex form-control-lg custom-control custom-radio">
+		{% include _choices_radio.html %}
 
-	<input class="form-check-input custom-control-input" type="radio" name="nestedOptions" id="nested6" value="nested6">
-	
-	<label class="form-check-label custom-control-label rounded-0" for="nested6">
+	{% endif %}
 
-	Desired Monthly Payment
-	
-	
-
-	</label>
-
-	</div>
-
-	
-
-	
-
-
-
-
+{% endfor %}
 
 
 </section>

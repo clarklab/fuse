@@ -338,6 +338,9 @@ $(function () {
 function advance(el) {
   $('#cardID1 .odometer').html(Math.floor(Math.random() * 100) + 249 );
   $('#cardID2 .odometer').html(Math.floor(Math.random() * 100) + 249 );
+  $('#cardID3 .odometer').html(Math.floor(Math.random() * 100) + 249 );
+  $('#cardID4 .odometer').html(Math.floor(Math.random() * 100) + 249 );
+  $('#cardID5 .odometer').html(Math.floor(Math.random() * 100) + 249 );
   var target = document.getElementById(el).nextElementSibling.id;
   javascript:setTimeout(()=>{window.location = '#'+target },500);
 }
@@ -351,6 +354,10 @@ function choices(el) {
 }
 
 $("[autofocus]").click();
+
+$( ".radio-added" ).on( "click", function() {
+  $(this).find( "input" ).prop("checked", true);
+});
 
 $( ".toggle" ).on( "click", function() {
   $(".toggle").addClass("text-muted");

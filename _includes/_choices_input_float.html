@@ -1,0 +1,23 @@
+<section class="form-floating {% if choice.radio %} radio-added{% endif %}">
+
+	<input
+		type="text"
+		class="form-control fw-bold rounded-0{% if choice.radio %} text-indent-3{% endif %}"
+		id="{{ question.slug }}"
+		placeholder="{{ choice.value }}"
+		value="{{ choice.value }}"
+		{% if question.selected %} autofocus{% endif %}
+	>
+	<label
+		for="{{ question.slug }}"
+		class="text-uppercase{% if choice.radio %} text-indent-3{% endif %}">
+		{{ choice.placeholder }}
+	</label>
+
+	{% if choice.nested == true %}
+	<div>
+	  <input class="form-check-input custom-control-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" {% if choice.selected %}checked="checked"{% endif %}>
+	</div>
+	{% endif %}
+
+</section>
