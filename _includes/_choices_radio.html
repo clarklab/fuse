@@ -1,17 +1,24 @@
 <div class="form-check-flex form-control-lg custom-control custom-radio">
 
 	<input
-		class="form-check-input custom-control-input"
+		class="form-check-input custom-control-input{% if choice.locked %} opacity-0{% endif %}"
+		{% if choice.type == "checkbox" %}
+		type="checkbox"
+		{% else %}
 		type="radio"
+		{% endif %}
 		name="{{ question.slug }}Options{{ choice.nested }}"
 		id="{{ question.slug }}{{ counter }}{{ choice.nested }}"
 		value="{{ question.slug }}{{ counter }}{{ choice.nested }}"
-		{% if choice.selected %} checked="checked"{% endif %}>
+		{% if choice.selected %} checked="checked"{% endif %}
+		{% if choice.locked %} disabled{% endif %}>
 	
 	<label
 		class="form-check-label custom-control-label rounded-0"
 		for="{{ question.slug }}{{ counter }}{{ choice.nested }}"
 		onclick="advance('{{ question.slug }}');">
+
+	{% if choice.locked %}<i class="bi bi-lock-fill position-absolute top-0 start-0 mt-3 ms-4 ps-2"></i>{% endif %}
 
 	{{ choice.value }} {% if choice.badge %}<span class="fs-6 badge rounded-pill text-primary bg-primary-10 fw-medium mx-2">{{ choice.badge }}</span>{% endif %}
 

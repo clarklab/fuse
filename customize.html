@@ -146,17 +146,51 @@ options:
     label: Protection Products
     placeholder: Customize your options
     modal: product
+    content: <a href="#" class="d-block text-decoration-none text-muted text-end" data-bs-toggle="modal" data-bs-target="#productModal">View All Protection Products <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+    choices:
+    - value: Vehicle Service Contract
+      type: checkbox
+      selected: true
+    - value: Environmental Coverage
+      type: checkbox
+      selected: true
   - question:
     type: input-float
     slug: accessories
     label: Accessories and Upgrades
     placeholder: Select your accessories
     modal: accessories
+    content: <a href="#" class="d-block text-decoration-none text-muted text-end" data-bs-toggle="modal" data-bs-target="#accessoriesModal">View All Accessories and Upgrades <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+    choices:
+    - value: All-Weather Floor Liners
+      type: checkbox
+      selected: true
+    - value: Door Edge Guards
+      type: checkbox
+      selected: true
   - question:
     type: input-float
     slug: rebates
     label: Conditional Rebates and Coupons
     placeholder: Select rebates and coupons
+    content: <a href="#" class="d-block text-decoration-none text-muted text-end" data-bs-toggle="modal" data-bs-target="#rebatesModal">More Rebate Options <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+    choices:
+    - value: Subaru Financing
+      selected: true
+      locked: true
+      tooltip: Save <strong>$500</strong>. Applies automatically when selecting Subaru Motors Finance.
+    - value: Miltary Rebate
+      type: checkbox
+      tooltip: Save <strong>$500</strong>. Available to all active and retired military members. See details
+    - value: Custom
+      type: checkbox
+      choices:
+      - value: $
+        type: input
+        placeholder: Custom Discount
+      - value:  
+        type: input
+        placeholder: Description
 
 trade:
   - question:

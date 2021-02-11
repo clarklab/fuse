@@ -104,7 +104,8 @@ html {
 }
 
 .choices, .wizard, .tabs {
-	.form-check-flex input[type="radio"]{
+	.form-check-flex input[type="radio"],
+	.form-check-flex input[type="checkbox"]{
 	margin:0;
 	left:$spacer*2;
 	top:50%;
@@ -119,7 +120,8 @@ html {
 }
 
 .choices{
-	.form-check-flex > input[type="radio"]{
+	.form-check-flex > input[type="radio"],
+	.form-check-flex > input[type="checkbox"]{
 	top:1.5rem;
 	transform:none;
 	}
@@ -138,6 +140,10 @@ html {
 			bottom:0.75rem;
 		}
 	}
+}
+
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label{
+	opacity: 1;
 }
 
 .choices.nested{
@@ -286,6 +292,11 @@ html {
 	input:checked + label .choices.nested,
 	input:checked + label .choices.nested .inner{
 		display: block;
+	}
+
+	.form-floating>.form-control~label {
+    	opacity: .65;
+	    transform: scale(.85) translateY(-.5rem) translateX(.15rem);
 	}
 }
 
@@ -509,6 +520,10 @@ h1.currency__usd:before{
 }
 .text-indent-4{
 	text-indent: 4rem;
+}
+
+.opacity-0{
+	opacity: 0 !important;
 }
 
 @import "../css/signin";

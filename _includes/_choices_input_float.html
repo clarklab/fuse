@@ -4,8 +4,10 @@
 		type="text"
 		class="form-control fw-bold rounded-0{% if choice.radio %} text-indent-3{% endif %}"
 		id="{{ question.slug }}"
+		{% if choice.value %}
 		placeholder="{{ choice.value }}"
 		value="{{ choice.value }}"
+		{% endif %}
 		{% if question.selected %} autofocus{% endif %}
 	>
 	<label

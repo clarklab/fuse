@@ -8172,7 +8172,10 @@ html {
   padding-left: 5rem;
   transition: .2s ease all; }
 
-.choices .form-check-flex input[type="radio"], .wizard .form-check-flex input[type="radio"], .tabs .form-check-flex input[type="radio"] {
+.choices .form-check-flex input[type="radio"],
+.choices .form-check-flex input[type="checkbox"], .wizard .form-check-flex input[type="radio"],
+.wizard .form-check-flex input[type="checkbox"], .tabs .form-check-flex input[type="radio"],
+.tabs .form-check-flex input[type="checkbox"] {
   margin: 0;
   left: 2rem;
   top: 50%;
@@ -8183,7 +8186,8 @@ html {
 .choices .radio-added input[type="radio"] {
   left: 1rem !important; }
 
-.choices .form-check-flex > input[type="radio"] {
+.choices .form-check-flex > input[type="radio"],
+.choices .form-check-flex > input[type="checkbox"] {
   top: 1.5rem;
   transform: none; }
 
@@ -8194,6 +8198,9 @@ html {
 .form-floating.sparkle:before {
   left: 2rem;
   bottom: 0.75rem; }
+
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  opacity: 1; }
 
 .choices.nested .form-floating > .form-control:focus ~ label, .choices.nested .form-floating > .form-control:not(:placeholder-shown) ~ label, .choices.nested .form-floating > .form-select ~ label {
   opacity: 1; }
@@ -8297,6 +8304,9 @@ html {
 .choices input:checked + label .choices.nested,
 .choices input:checked + label .choices.nested .inner {
   display: block; }
+.choices .form-floating > .form-control ~ label {
+  opacity: .65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem); }
 
 .question .custom-control-label::before, .question .custom-control-label::after {
   top: calc(50% - 8px);
@@ -8482,6 +8492,9 @@ h1.currency__usd:before, .currency__usd.h1:before {
 
 .text-indent-4 {
   text-indent: 4rem; }
+
+.opacity-0 {
+  opacity: 0 !important; }
 
 html,
 body {
