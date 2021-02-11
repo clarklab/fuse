@@ -422,7 +422,7 @@
 	<input
 		class="form-check-input custom-control-input"
 		
-		type="radio"
+		type="checkbox"
 		
 		name="tradeOptions"
 		id="trade1"
@@ -593,10 +593,192 @@
 	
 
 
+ 
+
+	
+
+	
+
+		<div class="form-check-flex form-control-lg custom-control custom-radio visually-hidden">
+
+	<input
+		class="form-check-input custom-control-input"
+		
+		type="checkbox"
+		
+		name="tradeOptions"
+		id="trade2"
+		value="trade2"
+		 checked="checked"
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="trade2"
+		onclick="advance('trade');">
+
+	
+
+	Second Trade 
+
+	
+	<div class="col choices nested pt-4">
+
+<section class="inner">
 
 
 
-<div class="content border p-3 bg-white">If you know your current vehicle value, please enter it above. If you still owe money, add a vehicle payoff. <div class="d-grid my-2"><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#tradeModal"><p class="small m-0 text-uppercase">Not Sure?</p><p class="fw-bold m-0">Look Up Vehicle Value</p><i class="bi bi-arrow-up-right-circle-fill position-absolute bottom-0 end-0 me-2 mb-2"></i></button><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative mt-3" type="button" data-bs-toggle="modal" data-bs-target="#creditModal"><p class="small m-0 text-uppercase">More than one?</p><p class="fw-bold m-0">+ Add Another Vehicle</p></button></div></div>
+
+
+	
+
+		<section class="form-floating ">
+
+	<input
+		type="text"
+		class="form-control fw-bold rounded-0"
+		id="trade"
+		
+		placeholder="$"
+		value="$"
+		
+		
+	>
+	<label
+		for="trade"
+		class="text-uppercase">
+		Vehicle Value
+	</label>
+
+	
+
+</section>
+
+	
+
+
+
+	
+
+		<section class="form-floating ">
+
+	<input
+		type="text"
+		class="form-control fw-bold rounded-0"
+		id="trade"
+		
+		placeholder="$"
+		value="$"
+		
+		
+	>
+	<label
+		for="trade"
+		class="text-uppercase">
+		Payoff
+	</label>
+
+	
+
+</section>
+
+	
+
+
+
+	
+
+		<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		
+		type="radio"
+		
+		name="tradeOptionstrue"
+		id="trade2true"
+		value="trade2true"
+		
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="trade2true"
+		onclick="advance('trade');">
+
+	
+
+	Vehicle Trade 
+
+	
+	
+	
+
+	</label>
+
+	</div>
+
+	
+
+
+
+	
+
+		<div class="form-check-flex form-control-lg custom-control custom-radio">
+
+	<input
+		class="form-check-input custom-control-input"
+		
+		type="radio"
+		
+		name="tradeOptionstrue"
+		id="trade2true"
+		value="trade2true"
+		
+		>
+	
+	<label
+		class="form-check-label custom-control-label rounded-0"
+		for="trade2true"
+		onclick="advance('trade');">
+
+	
+
+	Lease Trade 
+
+	
+	
+	
+
+	</label>
+
+	</div>
+
+	
+
+
+
+
+</section>
+
+</div>
+	
+	
+	
+
+	</label>
+
+	</div>
+
+	
+
+	
+
+
+
+
+
+<div class="content border p-3 bg-white">If you know your current vehicle value, please enter it above. If you still owe money, add a vehicle payoff. <div class="d-grid my-2"><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#tradeModal"><p class="small m-0 text-uppercase">Not Sure?</p><p class="fw-bold m-0">Look Up Vehicle Value</p><i class="bi bi-arrow-up-right-circle-fill position-absolute bottom-0 end-0 me-2 mb-2"></i></button><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative mt-3" type="button" onclick="show();"><p class="small m-0 text-uppercase">More than one?</p><p class="fw-bold m-0">+ Add Another Vehicle</p></button></div></div>
 
 
 </section>
@@ -5513,6 +5695,12 @@ $( ".toggle" ).on( "click", function() {
   $(this).removeClass("text-muted");
   return false;
 });
+
+function show(el) {
+  $(".visually-hidden").removeClass("visually-hidden");
+}
+
+
 
 </script>
 

@@ -15,10 +15,26 @@ options:
     slug: trade
     label: Trade Value
     placeholder: What's your current car worth?
-    content: If you know your current vehicle value, please enter it above. If you still owe money, add a vehicle payoff. <div class="d-grid my-2"><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#tradeModal"><p class="small m-0 text-uppercase">Not Sure?</p><p class="fw-bold m-0">Look Up Vehicle Value</p><i class="bi bi-arrow-up-right-circle-fill position-absolute bottom-0 end-0 me-2 mb-2"></i></button><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative mt-3" type="button" data-bs-toggle="modal" data-bs-target="#creditModal"><p class="small m-0 text-uppercase">More than one?</p><p class="fw-bold m-0">+ Add Another Vehicle</p></button></div>
+    content: If you know your current vehicle value, please enter it above. If you still owe money, add a vehicle payoff. <div class="d-grid my-2"><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#tradeModal"><p class="small m-0 text-uppercase">Not Sure?</p><p class="fw-bold m-0">Look Up Vehicle Value</p><i class="bi bi-arrow-up-right-circle-fill position-absolute bottom-0 end-0 me-2 mb-2"></i></button><button class="btn btn-primary btn-lg lh-sm text-start bg-primary-10 border-0 text-primary py-2 position-relative mt-3" type="button" onclick="show();"><p class="small m-0 text-uppercase">More than one?</p><p class="fw-bold m-0">+ Add Another Vehicle</p></button></div>
     choices:
     - value: Your Trade
+      type: checkbox
       selected: true
+      choices:
+      - value: $
+        type: input
+        placeholder: Vehicle Value
+      - value: $
+        type: input
+        placeholder: Payoff
+      - value: Vehicle Trade
+        nested: true
+      - value: Lease Trade
+        nested: true
+    - value: Second Trade
+      type: checkbox
+      selected: true
+      conditional: true
       choices:
       - value: $
         type: input
