@@ -1,0 +1,25 @@
+<div class="modal fade" id="dealModal" tabindex="-1" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-scrollable position-absolute bottom-0 start-0 ms-4">
+    <div class="modal-content col-4 w-100">
+      
+
+      <div class="modal-body px-5 py-5">
+
+
+          {% for var in deal %}
+
+        <div class="d-flex justify-content-between mb-2">
+        <small class="me-5">{{ var[0] }}</small>
+        <h6 class="ms-5 m-0 tabular" contenteditable="true">{{ var[1] }}</h6>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
+      
+
+    </div>
+
+  </div>
+</div>
