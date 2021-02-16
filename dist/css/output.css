@@ -8197,7 +8197,8 @@ html {
   text-indent: 1.25rem; }
 .form-floating.sparkle:before {
   left: 2rem;
-  bottom: 0.75rem; }
+  bottom: 0.75rem;
+  transform: translateX(-120%) translateY(0); }
 
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
   opacity: 1; }
@@ -8397,6 +8398,9 @@ h1.currency__usd:before, .currency__usd.h1:before {
   transform: translateX(-130%);
   top: 5px; }
 
+.sparkle {
+  position: relative; }
+
 .sparkle:before {
   content: " ";
   width: 18px;
@@ -8405,7 +8409,8 @@ h1.currency__usd:before, .currency__usd.h1:before {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  transform: translateX(-120%); }
+  transform: translateX(-120%) translateY(50%);
+  bottom: 50%; }
 
 .sparkle.active:before {
   background-image: url(../img/icon-sparkle-white.svg); }
